@@ -1,517 +1,1655 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='galeria.css') }}?v={{ time }}">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Galeria | Gugo Tatto</title>
+
+    <meta
+        name="description"
+        content="Confira nosso portfólio de tatuagem realismo em Guarulhos. Trabalhos autorais de retratos, natureza e texturas reais."
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='galeria.css') }}?v={{ time }}"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
-    <script>
-        
-function showGallery(id) {
-  // esconde todas as galerias
-  document.querySelectorAll('.gallery').forEach(g => g.style.display = 'none');
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
 
-  // mostra apenas a escolhida
-  const selected = document.getElementById(id);
-  if (selected) {
-    selected.style.display = 'grid';
-  }
-}
-function abrirModal(src) {
-    const modal = document.getElementById('modal-zoom');
-    const imgModal = document.getElementById('img-modal');
-    imgModal.src = src; 
-    modal.classList.remove('hidden'); 
-}
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
 
-function fecharModal() {
-    document.getElementById('modal-zoom').classList.add('hidden'); // Esconde o modal
-}
-</script>
 </head>
+
+
 <body>
-    <nav>
-    <div class="logo">
-        <a href="#"><img src="{{ url_for('static', filename='imagens/gugologo.webp') }}" class="animar-esquerda"></a>
-    </div>
 
-    <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
 
-    <ul class="ul-nav aparecer" id="nav-list">
-        <li><a href="/" class="active"><strong>home</strong></a></li>
-        <li><a href="/galeria"><strong>Galeria</strong></a></li>
-        <li><a href="/estudio"><strong>Estudio</strong></a></li>
-        <li><a href="/blog"><strong>Blog</strong></a></li>
-        <li><a href="/atendimento"><strong>Atendimento</strong></a></li>
-    </ul>
-</nav>
-<section class="banner-galeria">
-    <div class="escritas-banner">
-        <h1 class="aparecer">Galeria de inspirações</h1>
-        <p class="aparecer">Confira nosso portfólio de tatuagem realismo em Guarulhos. Trabalhos autorais de retratos, natureza e texturas reais.</p>
-    </div>
-</section>
-<section>
-    <div class="buttons">
-            <button class="button-css animar-esquerda" onclick="showGallery('gugo')">Gugo Tattoo</button>
-            <button class="button-css aparecer" onclick="showGallery('edgar')">Edgar</button>
-            <button class="button-css animar-direita" onclick="showGallery('gislaine')">Gislaine</button>
-            <button class="button-css animar-esquerda" onclick="showGallery('shira')">Shira</button>
-            <button class="button-css aparecer" onclick="showGallery('luana')">Luana</button>
-            <button class="button-css animar-direita" onclick="showGallery('eryck')">Eryck</button>  
-    </div>
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
 
-    <div class="gallery" id="gugo">
-        <img 
-        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo1.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-        <img 
-        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo2.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-        <img 
-        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo3.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-        <img 
-        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo4.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-        <img 
-        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo5.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo6.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo7.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo8.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo9.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo10.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo11.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-        
-    </div>
-    <div class="gallery" id="edgar">
-        <img 
-        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo1.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo2.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo3.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo4.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo5.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo6.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo7.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo8.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo9.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo10.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    </div>
-    <div class="gallery" id="gislaine">
-        <img 
-        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo1.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo2.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo3.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo4.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo5.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo6.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo7.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo8.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo9.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo10.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    </div>
+    <nav id="main-nav">
 
-    <div class="gallery" id="shira">
-        <img 
-        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo1.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo2.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo3.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo4.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo5.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo6.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo7.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo8.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo9.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo10.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    </div>
+        <div class="logo">
 
-    <div class="gallery" id="luana">
-        <img 
-        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo1.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo2.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo3.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo4.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo5.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo6.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo7.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo8.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo9.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo10.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    </div>
-    <div class="gallery" id="eryck">
-        <img 
-        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo1.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo2.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo3.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo4.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo5.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo6.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo7.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo8.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo9.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    <img 
-        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo10.webp') }}" 
-        onclick="abrirModal(this.src)" 
-        class="cursor-pointer transition-transform duration-300 hover:scale-105"
-    >
-    </div>
-</section>
-<footer>
-  <div class="footer-container">
-    <div class="footer-column">
-      <img src="{{ url_for('static', filename='imagens/gugologo.webp') }}" alt="Gugo tattoo" class="footer-logo">
-      <p><strong>Cada traço, uma história. <br> A sua pode começar agora.
-      </strong></p>
-    </div>
+            <a href="/">
 
-    <div class="footer-column">
-      <h3>LINKS RÁPIDOS</h3>
-      <ul>
-        <li><a href="#">O Estúdio</a></li>
-        <li><a href="#">Artistas</a></li>
-        <li><a href="#">Galeria</a></li>
-        <li><a href="#">Orçamento</a></li>
-      </ul>
-    </div>
+                <img
+                    src="{{ url_for('static', filename='imagens/gugologo.webp') }}"
+                    class="animar-esquerda"
+                    alt="Gugo Tattoo"
+                >
 
-    <div class="footer-column">
-      <h3>CONTATO</h3>
-      <p>Horário de Funcionamento:</p>
-      <p>Terça a Sexta: 10h às 20h</p>
-      <p>Sábado: 10h às 18h</p>
-      <div class="footer-bt-div">
-        <button class="footer-bt">
-          <img src="{{ url_for('static', filename='imagens/instagram.svg') }}" alt="">
+            </a>
+
+        </div>
+
+
+        <div
+            class="menu-toggle"
+            id="mobile-menu"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+        >
+
+            <span class="bar"></span>
+
+            <span class="bar"></span>
+
+            <span class="bar"></span>
+
+        </div>
+
+
+        <ul
+            class="ul-nav"
+            id="nav-list"
+        >
+
+            <li>
+                <a href="/">
+                    <strong>home</strong>
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="/galeria"
+                    class="active"
+                >
+                    <strong>Galeria</strong>
+                </a>
+            </li>
+
+            <li>
+                <a href="/estudio">
+                    <strong>Estudio</strong>
+                </a>
+            </li>
+
+            <li>
+                <a href="/blog">
+                    <strong>Blog</strong>
+                </a>
+            </li>
+
+            <li>
+                <a href="/atendimento">
+                    <strong>Atendimento</strong>
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="banner-galeria">
+
+        <div class="hero-galeria-overlay"></div>
+
+        <div class="hero-galeria-noise"></div>
+
+
+        <div class="escritas-banner">
+
+            <div class="hero-eyebrow aparecer">
+
+                <span></span>
+
+                GUGO TATTO
+
+                <span></span>
+
+            </div>
+
+
+            <h1 class="aparecer">
+
+                Galeria de inspirações
+
+            </h1>
+
+
+            <p class="aparecer">
+
+                Confira nosso portfólio de tatuagem realismo em Guarulhos. Trabalhos autorais de retratos, natureza e texturas reais.
+
+            </p>
+
+
+            <div class="hero-line aparecer"></div>
+
+        </div>
+
+
+        <div class="hero-scroll">
+
+            <span>EXPLORE</span>
+
+            <i></i>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         GALERIA
+    ====================================================== -->
+
+    <section class="galeria-section">
+
+
+        <div class="galeria-heading">
+
+            <div class="section-eyebrow aparecer">
+
+                <span>01</span>
+
+                <i></i>
+
+                ARTISTAS
+
+            </div>
+
+
+            <h2 class="aparecer">
+
+                Escolha um artista
+
+            </h2>
+
+
+            <p class="aparecer">
+
+                Explore alguns dos trabalhos realizados pela nossa equipe.
+
+            </p>
+
+        </div>
+
+
+        <!-- FILTROS -->
+
+        <div class="buttons">
+
+
+            <button
+                class="button-css active animar-esquerda"
+                onclick="showGallery('gugo', this)"
+            >
+
+                Gugo Tattoo
+
+            </button>
+
+
+            <button
+                class="button-css aparecer"
+                onclick="showGallery('edgar', this)"
+            >
+
+                Edgar
+
+            </button>
+
+
+            <button
+                class="button-css animar-direita"
+                onclick="showGallery('gislaine', this)"
+            >
+
+                Gislaine
+
+            </button>
+
+
+            <button
+                class="button-css animar-esquerda"
+                onclick="showGallery('shira', this)"
+            >
+
+                Shira
+
+            </button>
+
+
+            <button
+                class="button-css aparecer"
+                onclick="showGallery('luana', this)"
+            >
+
+                Luana
+
+            </button>
+
+
+            <button
+                class="button-css animar-direita"
+                onclick="showGallery('eryck', this)"
+            >
+
+                Eryck
+
+            </button>
+
+
+        </div>
+
+
+        <!-- =================================================
+             GUGO
+        ================================================== -->
+
+        <div
+            class="gallery active"
+            id="gugo"
+        >
+
+            <div class="gallery-item">
+
+                <img
+                    src="{{ url_for('static', filename='imagens/gugotattoo/tattoo1.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gugo Tattoo 1"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="{{ url_for('static', filename='imagens/gugotattoo/tattoo2.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gugo Tattoo 2"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="{{ url_for('static', filename='imagens/gugotattoo/tattoo3.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gugo Tattoo 3"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="{{ url_for('static', filename='imagens/gugotattoo/tattoo4.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gugo Tattoo 4"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="{{ url_for('static', filename='imagens/gugotattoo/tattoo5.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gugo Tattoo 5"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="{{ url_for('static', filename='imagens/gugotattoo/tattoo6.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gugo Tattoo 6"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="{{ url_for('static', filename='imagens/gugotattoo/tattoo7.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gugo Tattoo 7"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="{{ url_for('static', filename='imagens/gugotattoo/tattoo8.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gugo Tattoo 8"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="{{ url_for('static', filename='imagens/gugotattoo/tattoo9.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gugo Tattoo 9"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="{{ url_for('static', filename='imagens/gugotattoo/tattoo10.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gugo Tattoo 10"
+                >
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="{{ url_for('static', filename='imagens/gugotattoo/tattoo11.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gugo Tattoo 11"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             EDGAR
+        ================================================== -->
+
+        <div
+            class="gallery"
+            id="edgar"
+        >
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/edgartattoo/tattoo1.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Edgar 1"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/edgartattoo/tattoo2.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Edgar 2"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/edgartattoo/tattoo3.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Edgar 3"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/edgartattoo/tattoo4.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Edgar 4"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/edgartattoo/tattoo5.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Edgar 5"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/edgartattoo/tattoo6.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Edgar 6"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/edgartattoo/tattoo7.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Edgar 7"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/edgartattoo/tattoo8.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Edgar 8"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/edgartattoo/tattoo9.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Edgar 9"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/edgartattoo/tattoo10.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Edgar 10"
+                >
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             GISLAINE
+        ================================================== -->
+
+        <div
+            class="gallery"
+            id="gislaine"
+        >
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/gihtattoo/tattoo1.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gislaine 1"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/gihtattoo/tattoo2.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gislaine 2"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/gihtattoo/tattoo3.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gislaine 3"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/gihtattoo/tattoo4.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gislaine 4"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/gihtattoo/tattoo5.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gislaine 5"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/gihtattoo/tattoo6.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gislaine 6"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/gihtattoo/tattoo7.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gislaine 7"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/gihtattoo/tattoo8.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gislaine 8"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/gihtattoo/tattoo9.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gislaine 9"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/gihtattoo/tattoo10.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Gislaine 10"
+                >
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SHIRA
+        ================================================== -->
+
+        <div
+            class="gallery"
+            id="shira"
+        >
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/shiratattoo/tattoo1.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Shira 1"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/shiratattoo/tattoo2.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Shira 2"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/shiratattoo/tattoo3.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Shira 3"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/shiratattoo/tattoo4.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Shira 4"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/shiratattoo/tattoo5.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Shira 5"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/shiratattoo/tattoo6.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Shira 6"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/shiratattoo/tattoo7.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Shira 7"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/shiratattoo/tattoo8.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Shira 8"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/shiratattoo/tattoo9.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Shira 9"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/shiratattoo/tattoo10.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Shira 10"
+                >
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             LUANA
+        ================================================== -->
+
+        <div
+            class="gallery"
+            id="luana"
+        >
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/luanatattoo/tattoo1.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Luana 1"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/luanatattoo/tattoo2.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Luana 2"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/luanatattoo/tattoo3.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Luana 3"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/luanatattoo/tattoo4.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Luana 4"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/luanatattoo/tattoo5.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Luana 5"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/luanatattoo/tattoo6.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Luana 6"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/luanatattoo/tattoo7.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Luana 7"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/luanatattoo/tattoo8.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Luana 8"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/luanatattoo/tattoo9.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Luana 9"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/luanatattoo/tattoo10.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Luana 10"
+                >
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             ERYCK
+        ================================================== -->
+
+        <div
+            class="gallery"
+            id="eryck"
+        >
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/erycktattoo/tattoo1.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Eryck 1"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/erycktattoo/tattoo2.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Eryck 2"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/erycktattoo/tattoo3.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Eryck 3"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/erycktattoo/tattoo4.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Eryck 4"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/erycktattoo/tattoo5.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Eryck 5"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/erycktattoo/tattoo6.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Eryck 6"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/erycktattoo/tattoo7.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Eryck 7"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/erycktattoo/tattoo8.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Eryck 8"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/erycktattoo/tattoo9.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Eryck 9"
+                >
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="{{ url_for('static', filename='imagens/erycktattoo/tattoo10.webp') }}"
+                    onclick="abrirModal(this.src)"
+                    alt="Tatuagem Eryck 10"
+                >
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <div class="footer-column">
+
+                <img
+                    src="{{ url_for('static', filename='imagens/gugologo.webp') }}"
+                    alt="Gugo tattoo"
+                    class="footer-logo"
+                >
+
+                <p>
+
+                    <strong>
+                        Cada traço, uma história.
+                        <br>
+                        A sua pode começar agora.
+                    </strong>
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    LINKS RÁPIDOS
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            O Estúdio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Artistas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/galeria">
+                            Galeria
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Orçamento
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    CONTATO
+                </h3>
+
+                <p>
+                    Horário de Funcionamento:
+                </p>
+
+                <p>
+                    Terça a Sexta: 10h às 20h
+                </p>
+
+                <p>
+                    Sábado: 10h às 18h
+                </p>
+
+
+                <div class="footer-bt-div">
+
+                    <button class="footer-bt">
+
+                        <img
+                            src="{{ url_for('static', filename='imagens/instagram.svg') }}"
+                            alt=""
+                        >
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2025 Gugo Tattoo. Todos os direitos reservados
+            </p>
+
+            <p>
+                Rua João Bueno, 155, Guarulhos, SP
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         MODAL
+    ====================================================== -->
+
+    <div
+        id="modal-zoom"
+        class="modal-zoom"
+        onclick="fecharModal(event)"
+        aria-hidden="true"
+    >
+
+        <button
+            class="modal-close"
+            onclick="fecharModal(event)"
+            aria-label="Fechar imagem"
+        >
+            ×
         </button>
-      </div>
+
+
+        <div class="modal-counter">
+            CLIQUE FORA PARA FECHAR
+        </div>
+
+
+        <div class="modal-image-wrap">
+
+            <img
+                id="img-modal"
+                src=""
+                alt="Tatuagem ampliada"
+            >
+
+        </div>
+
     </div>
-  </div>
 
-  <div class="footer-bottom">
-    <p>© 2025 Gugo Tattoo. Todos os direitos reservados</p>
-    <p>Rua João Bueno, 155, Guarulhos, SP</p>
-  </div>
-</footer>
-<div 
-  id="modal-zoom" 
-  class="hidden fixed inset-0 flex items-center justify-center bg-black/90 z-50"
-  onclick="fecharModal()"
->
-  <img id="img-modal" src="" class="max-w-[80%] max-h-[80%] rounded-lg shadow-2xl">
-</div>
 
-<script>
-  // Registra o plugin no GSAP
-gsap.registerPlugin(ScrollTrigger);
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
-// Função para configurar as animações
-function initAnimations() {
+    <script>
 
-    // 1. ANIMAÇÃO: DA ESQUERDA PARA DIREITA
-    document.querySelectorAll('.animar-esquerda').forEach(el => {
-        gsap.from(el, {
-            x: -100,          // Começa 100px à esquerda
-            opacity: 0,       // Começa invisível
-            duration: 1.2,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: el,       // O gatilho é o próprio elemento
-                start: "top 85%",  // Começa quando o topo do item atinge 85% da tela
-                toggleActions: "play none none none" // Toca apenas uma vez
+        gsap.registerPlugin(ScrollTrigger);
+
+
+        /* =====================================================
+           GALERIA
+        ===================================================== */
+
+        function showGallery(id, button) {
+
+            const galleries =
+                document.querySelectorAll(".gallery");
+
+
+            galleries.forEach(gallery => {
+
+                gallery.classList.remove("active");
+
+            });
+
+
+            const selected =
+                document.getElementById(id);
+
+
+            if (!selected) return;
+
+
+            selected.classList.add("active");
+
+
+            document
+                .querySelectorAll(".button-css")
+                .forEach(btn => {
+
+                    btn.classList.remove("active");
+
+                });
+
+
+            if (button) {
+
+                button.classList.add("active");
+
             }
-        });
-    });
 
-    // 2. ANIMAÇÃO: DA DIREITA PARA ESQUERDA
-    document.querySelectorAll('.animar-direita').forEach(el => {
-        gsap.from(el, {
-            x: 100,           // Começa 100px à direita
-            opacity: 0,
-            duration: 1.2,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: el,
-                start: "top 80%",
-                toggleActions: "play none none none"
-            }
-        });
-    });
 
-    // 3. ANIMAÇÃO: APARECER (Crescer/Surgir de baixo)
-    
-        // 3. ANIMAÇÃO: APARECER (Individual para cada item)
-document.querySelectorAll('.aparecer').forEach(el => {
-    gsap.from(el, {
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: el,       // O gatilho agora é o próprio elemento atual (el)
-            start: "top 90%",  // Dispara quando o elemento entra na tela
-            toggleActions: "play none none none"
+            const items =
+                selected.querySelectorAll(".gallery-item");
+
+
+            gsap.fromTo(
+                items,
+
+                {
+                    opacity: 0,
+                    y: 30,
+                    scale: .97
+                },
+
+                {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+
+                    duration: .65,
+
+                    stagger: .045,
+
+                    ease: "power3.out"
+                }
+            );
+
+
+            setTimeout(() => {
+
+                ScrollTrigger.refresh();
+
+            }, 100);
+
         }
-    });
-});
-    };
-
-    
 
 
-// Inicia as animações apenas após o carregamento total da página
-window.addEventListener('load', initAnimations);
-</script>
-<script>
-    const menu = document.querySelector('#mobile-menu');
-    const menuLinks = document.querySelector('#nav-list');
+        /* =====================================================
+           MODAL
+        ===================================================== */
 
-    menu.addEventListener('click', function() {
-        menu.classList.toggle('is-active'); // Anima o hambúrguer
-        menuLinks.classList.toggle('active'); // Abre/fecha o menu
-    });
+        function abrirModal(src) {
 
-    // Fecha o menu ao clicar em um link
-    document.querySelectorAll('.ul-nav li a').forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('is-active');
-            menuLinks.classList.remove('active');
-        });
-    });
-</script>
+            const modal =
+                document.getElementById("modal-zoom");
+
+            const img =
+                document.getElementById("img-modal");
+
+
+            if (!modal || !img) return;
+
+
+            img.src = src;
+
+
+            modal.classList.add("show");
+
+            modal.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+
+            document.body.classList.add(
+                "modal-open"
+            );
+
+
+            gsap.fromTo(
+                ".modal-image-wrap",
+
+                {
+                    opacity: 0,
+                    scale: .92,
+                    y: 20
+                },
+
+                {
+                    opacity: 1,
+                    scale: 1,
+                    y: 0,
+
+                    duration: .5,
+
+                    ease: "power3.out"
+                }
+            );
+
+        }
+
+
+        function fecharModal(event) {
+
+            if (
+                event &&
+                event.target &&
+                event.target.id !== "modal-zoom" &&
+                !event.target.classList.contains("modal-close")
+            ) {
+
+                return;
+
+            }
+
+
+            const modal =
+                document.getElementById("modal-zoom");
+
+
+            if (!modal) return;
+
+
+            gsap.to(
+                ".modal-image-wrap",
+
+                {
+                    opacity: 0,
+                    scale: .95,
+                    duration: .25,
+
+                    onComplete: () => {
+
+                        modal.classList.remove("show");
+
+                        modal.setAttribute(
+                            "aria-hidden",
+                            "true"
+                        );
+
+                        document.body.classList.remove(
+                            "modal-open"
+                        );
+
+                    }
+                }
+            );
+
+        }
+
+
+        /* =====================================================
+           ESC FECHA MODAL
+        ===================================================== */
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    const modal =
+                        document.getElementById(
+                            "modal-zoom"
+                        );
+
+
+                    if (
+                        modal &&
+                        modal.classList.contains("show")
+                    ) {
+
+                        fecharModal({
+                            target: modal
+                        });
+
+                    }
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           NAVBAR / MOBILE
+        ===================================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            () => {
+
+
+                const nav =
+                    document.getElementById(
+                        "main-nav"
+                    );
+
+
+                const menu =
+                    document.getElementById(
+                        "mobile-menu"
+                    );
+
+
+                const navList =
+                    document.getElementById(
+                        "nav-list"
+                    );
+
+
+                function updateNav() {
+
+                    if (!nav) return;
+
+
+                    if (
+                        window.scrollY > 25
+                    ) {
+
+                        nav.classList.add(
+                            "scrolled"
+                        );
+
+                    } else {
+
+                        nav.classList.remove(
+                            "scrolled"
+                        );
+
+                    }
+
+                }
+
+
+                updateNav();
+
+
+                window.addEventListener(
+                    "scroll",
+                    updateNav,
+                    {
+                        passive: true
+                    }
+                );
+
+
+                if (
+                    menu &&
+                    navList
+                ) {
+
+                    menu.addEventListener(
+                        "click",
+                        () => {
+
+                            const active =
+                                navList.classList.toggle(
+                                    "active"
+                                );
+
+
+                            menu.classList.toggle(
+                                "is-active",
+                                active
+                            );
+
+
+                            menu.setAttribute(
+                                "aria-expanded",
+                                active
+                            );
+
+
+                            document.body.classList.toggle(
+                                "menu-open",
+                                active
+                            );
+
+                        }
+                    );
+
+
+                    navList
+                        .querySelectorAll("a")
+                        .forEach(link => {
+
+                            link.addEventListener(
+                                "click",
+                                () => {
+
+                                    navList.classList.remove(
+                                        "active"
+                                    );
+
+                                    menu.classList.remove(
+                                        "is-active"
+                                    );
+
+                                    menu.setAttribute(
+                                        "aria-expanded",
+                                        "false"
+                                    );
+
+                                    document.body.classList.remove(
+                                        "menu-open"
+                                    );
+
+                                }
+                            );
+
+                        });
+
+                }
+
+
+                /* =================================================
+                   ANIMAÇÕES
+                ================================================= */
+
+
+                const reducedMotion =
+                    window.matchMedia(
+                        "(prefers-reduced-motion: reduce)"
+                    ).matches;
+
+
+                if (!reducedMotion) {
+
+
+                    document
+                        .querySelectorAll(
+                            ".animar-esquerda"
+                        )
+                        .forEach(element => {
+
+                            gsap.fromTo(
+                                element,
+
+                                {
+                                    x: -55,
+                                    opacity: 0
+                                },
+
+                                {
+                                    x: 0,
+                                    opacity: 1,
+
+                                    duration: 1,
+
+                                    ease:
+                                        "power3.out",
+
+                                    scrollTrigger: {
+
+                                        trigger: element,
+
+                                        start:
+                                            "top 88%",
+
+                                        once: true
+
+                                    }
+
+                                }
+                            );
+
+                        });
+
+
+                    document
+                        .querySelectorAll(
+                            ".animar-direita"
+                        )
+                        .forEach(element => {
+
+                            gsap.fromTo(
+                                element,
+
+                                {
+                                    x: 55,
+                                    opacity: 0
+                                },
+
+                                {
+                                    x: 0,
+                                    opacity: 1,
+
+                                    duration: 1,
+
+                                    ease:
+                                        "power3.out",
+
+                                    scrollTrigger: {
+
+                                        trigger: element,
+
+                                        start:
+                                            "top 88%",
+
+                                        once: true
+
+                                    }
+
+                                }
+                            );
+
+                        });
+
+
+                    document
+                        .querySelectorAll(
+                            ".aparecer"
+                        )
+                        .forEach(element => {
+
+                            gsap.fromTo(
+                                element,
+
+                                {
+                                    y: 35,
+                                    opacity: 0
+                                },
+
+                                {
+                                    y: 0,
+                                    opacity: 1,
+
+                                    duration: .85,
+
+                                    ease:
+                                        "power3.out",
+
+                                    scrollTrigger: {
+
+                                        trigger: element,
+
+                                        start:
+                                            "top 91%",
+
+                                        once: true
+
+                                    }
+
+                                }
+                            );
+
+                        });
+
+
+                    /* HERO PARALLAX */
+
+                    const hero =
+                        document.querySelector(
+                            ".banner-galeria"
+                        );
+
+
+                    if (hero) {
+
+                        gsap.to(
+                            ".escritas-banner",
+
+                            {
+
+                                yPercent: -10,
+
+                                ease: "none",
+
+                                scrollTrigger: {
+
+                                    trigger: hero,
+
+                                    start:
+                                        "top top",
+
+                                    end:
+                                        "bottom top",
+
+                                    scrub: true
+
+                                }
+
+                            }
+                        );
+
+                    }
+
+
+                    /* MOVIMENTO DOS CARDS */
+
+                    document
+                        .querySelectorAll(
+                            ".gallery-item"
+                        )
+                        .forEach(item => {
+
+                            item.addEventListener(
+                                "mousemove",
+                                event => {
+
+                                    const rect =
+                                        item.getBoundingClientRect();
+
+
+                                    const x =
+                                        event.clientX -
+                                        rect.left;
+
+
+                                    const y =
+                                        event.clientY -
+                                        rect.top;
+
+
+                                    const rotateY =
+                                        ((x / rect.width) - .5) * 2;
+
+
+                                    const rotateX =
+                                        ((y / rect.height) - .5) * -2;
+
+
+                                    item.style.transform =
+                                        `perspective(900px)
+                                         rotateX(${rotateX}deg)
+                                         rotateY(${rotateY}deg)
+                                         translateY(-5px)`;
+
+                                }
+                            );
+
+
+                            item.addEventListener(
+                                "mouseleave",
+                                () => {
+
+                                    item.style.transform =
+                                        "";
+
+                                }
+                            );
+
+                        });
+
+                }
+
+
+                /* PRIMEIRA GALERIA */
+
+                showGallery(
+                    "gugo",
+                    document.querySelector(
+                        ".button-css"
+                    )
+                );
+
+
+                ScrollTrigger.refresh();
+
+            }
+        );
+
+    </script>
+
+
 </body>
+
 </html>

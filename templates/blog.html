@@ -1,128 +1,839 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+
     <title>Blog Gugo Tattoo | Dicas e Tendências de Tatuagem em Guarulhos</title>
-<meta name="description" content="Tudo sobre o universo da tatuagem em Guarulhos. Dicas de cicatrização, tendências de realismo, estilo cyberpunk, tatuagem em pele negra e tintas veganas.">
-<meta name="keywords" content="blog de tatuagem, gugo tattoo guarulhos, tatuagem realismo guarulhos, cuidados com a tatuagem, tatuagem geek, melhor estúdio de tattoo guarulhos">
-<meta name="author" content="Gugo Tattoo">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog Gugo Tattoo | Arte e Conteúdo em Guarulhos">
-<meta property="og:description" content="Explore guias completos sobre estilos, técnicas e cuidados com a sua tatuagem. Referência em Realismo e Futurismo.">
-<meta property="og:image" content="https://images.pexels.com/photos/4125588/pexels-photo-4125588.jpeg"> <meta property="og:url" content="https://gugotattoo.com.br/blog">
+    <meta name="description" content="Tudo sobre o universo da tatuagem em Guarulhos. Dicas de cicatrização, tendências de realismo, estilo cyberpunk, tatuagem em pele negra e tintas veganas.">
+    <meta name="keywords" content="blog de tatuagem, gugo tattoo guarulhos, tatuagem realismo guarulhos, cuidados com a tatuagem, tatuagem geek, melhor estúdio de tattoo guarulhos">
+    <meta name="author" content="Gugo Tattoo">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Blog Gugo Tattoo | Tendências 2026">
-<meta name="twitter:description" content="Dicas de especialistas e os estilos que estão dominando a cena da tatuagem.">
-<meta name="twitter:image" content="https://images.pexels.com/photos/4125588/pexels-photo-4125588.jpeg">
-    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog Gugo Tattoo | Arte e Conteúdo em Guarulhos">
+    <meta property="og:description" content="Explore guias completos sobre estilos, técnicas e cuidados com a sua tatuagem. Referência em Realismo e Futurismo.">
+    <meta property="og:image" content="https://images.pexels.com/photos/4125588/pexels-photo-4125588.jpeg">
+    <meta property="og:url" content="https://gugotattoo.com.br/blog">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog Gugo Tattoo | Tendências 2026">
+    <meta name="twitter:description" content="Dicas de especialistas e os estilos que estão dominando a cena da tatuagem.">
+    <meta name="twitter:image" content="https://images.pexels.com/photos/4125588/pexels-photo-4125588.jpeg">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='blog.css') }}?v={{ time }}">
 </head>
-<body class="bg-black text-zinc-300">
 
-<nav>
+<body>
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav id="navbar">
+
     <div class="logo">
-        <a href="#"><img src="{{ url_for('static', filename='imagens/gugologo.webp') }}" class="animar-esquerda"></a>
+        <a href="/">
+            <img
+                src="{{ url_for('static', filename='imagens/gugologo.webp') }}"
+                alt="Gugo Tattoo"
+                class="logo-img"
+            >
+        </a>
     </div>
 
-    <div class="menu-toggle" id="mobile-menu">
+    <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menu">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
     </div>
 
-    <ul class="ul-nav aparecer" id="nav-list">
-        <li><a href="/" class="active"><strong>home</strong></a></li>
-        <li><a href="/galeria"><strong>Galeria</strong></a></li>
-        <li><a href="/estudio"><strong>Estudio</strong></a></li>
-        <li><a href="/blog"><strong>Blog</strong></a></li>
-        <li><a href="/atendimento"><strong>Atendimento</strong></a></li>
+    <ul class="ul-nav" id="nav-list">
+
+        <li>
+            <a href="/">
+                <strong>home</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="/galeria">
+                <strong>Galeria</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="/estudio">
+                <strong>Estudio</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="/blog" class="active">
+                <strong>Blog</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="/atendimento">
+                <strong>Atendimento</strong>
+            </a>
+        </li>
+
     </ul>
+
 </nav>
 
-    <main class="max-w-7xl mx-auto px-4 py-12 pt-40">
-        <header class="mb-12 border-l-4 border-[#b4977b] pl-6">
-            <h1 class="text-white text-4xl md:text-5xl font-black uppercase tracking-tighter">Explorar Universo Tattoo</h1>
-            <p class="text-zinc-500 mt-2 italic">A arte, a técnica e a cultura da tatuagem em Guarulhos.</p>
-        </header>
 
-        <section class="mb-16">
-            <div class="relative group overflow-hidden rounded-2xl bg-black aspect-[21/9]">
-                <img src="https://images.pexels.com/photos/4125588/pexels-photo-4125588.jpeg" alt="Tatuagem Realista em Guarulhos" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition duration-500">
-                <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent">
-                    <span class="bg-[#b4977b] text-white text-xs font-bold px-3 py-1 w-fit rounded-full mb-4 uppercase">Destaque do Mês</span>
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Realismo Negro e Cinza: A Evolução em 2026</h2>
-                    <p class="text-zinc-300 max-w-2xl mb-6">Conheça as técnicas de sombreamento e retratos 3D que estão definindo o novo padrão de <strong>realismo em Guarulhos</strong>.</p>
-                    <a href="/realismo" class="bg-white text-black px-6 py-3 font-bold rounded-lg hover:bg-[#b4977b] hover:text-white transition w-fit">Ler Matéria Completa</a>
-                </div>
+<!-- =========================================================
+     CONTEÚDO
+========================================================= -->
+
+<main class="blog-page">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="blog-header reveal-header">
+
+        <div class="header-line"></div>
+
+        <div class="header-content">
+
+            <span class="eyebrow">
+                GUGO TATTOO
+            </span>
+
+            <h1>
+                Explorar Universo Tattoo
+            </h1>
+
+            <p>
+                A arte, a técnica e a cultura da tatuagem em Guarulhos.
+            </p>
+
+        </div>
+
+        <div class="header-number">
+            01
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MATÉRIA DESTAQUE
+    ====================================================== -->
+
+    <section class="featured-section">
+
+        <div class="featured-card reveal-featured">
+
+            <div class="featured-image">
+
+                <img
+                    src="https://images.pexels.com/photos/4125588/pexels-photo-4125588.jpeg"
+                    alt="Tatuagem Realista em Guarulhos"
+                >
+
+                <div class="featured-overlay"></div>
+
+                <div class="image-grain"></div>
+
+                <div class="featured-corner top-left"></div>
+                <div class="featured-corner bottom-right"></div>
+
             </div>
-        </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            
-            <article class="flex flex-col gap-4">
-                <img src="{{ url_for('static', filename='imagens/blogs/cuidados/cuidados.jpg') }}" class="rounded-xl h-64 object-cover hover:opacity-90 transition cursor-pointer">
-                <div>
-                    <span class="text-[#b4977b] font-bold text-sm">CUIDADOS & SAÚDE</span>
-                    <h3 class="text-xl font-bold mt-2 text-white">Guia de Cicatrização Pós-Tattoo</h3>
-                    <p class="text-zinc-600 mt-2 line-clamp-2">Aprenda como cuidar da sua tatuagem nos primeiros 30 dias para garantir cores vivas e traços nítidos.</p>
-                </div>
-                <a href="/cuidados" class="text-[#b4977b] font-bold text-sm hover:underline uppercase tracking-widest">Ler mais →</a>
-            </article>
 
-            <article class="flex flex-col gap-4">
-                <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=800" class="rounded-xl h-64 object-cover hover:opacity-90 transition cursor-pointer">
-                <div>
-                    <span class="text-[#b4977b] font-bold text-sm">ESTILOS FUTURISTAS</span>
-                    <h3 class="text-xl font-bold mt-2 text-white">Cyberpunk: O Futuro na Pele</h3>
-                    <p class="text-zinc-600 mt-2 line-clamp-2">A fusão homem-máquina através de circuitos e luzes neon. A tendência <strong>geek</strong> que domina os estúdios.</p>
-                </div>
-                <a href="/estilo" class="text-[#b4977b] font-bold text-sm hover:underline uppercase tracking-widest">Ler mais →</a>
-            </article>
+            <div class="featured-content">
 
-            <article class="flex flex-col gap-4">
-                <img src="https://images.pexels.com/photos/2183131/pexels-photo-2183131.jpeg" class="rounded-xl h-64 object-cover hover:opacity-90 transition cursor-pointer">
-                <div>
-                    <span class="text-[#b4977b] font-bold text-sm">GUIA INICIANTE</span>
-                    <h3 class="text-xl font-bold mt-2 text-white">Sua Primeira Tatuagem: Guia Prático</h3>
-                    <p class="text-zinc-600 mt-2 line-clamp-2">Tudo sobre dor, escolha do local e como selecionar o melhor <strong>tatuador em Guarulhos</strong> para seu projeto.</p>
-                </div>
-                <a href="/primeira" class="text-[#b4977b] font-bold text-sm hover:underline uppercase tracking-widest">Ler mais →</a>
-            </article>
+                <div class="featured-top">
 
-            <article class="flex flex-col gap-4">
-                <img src="https://img.freepik.com/fotos-premium/mulher-com-extensas-tatuagens-posando-contra-um-fundo-cinzento_305419-10495.jpg?semt=ais_hybrid&w=740&q=80" class="rounded-xl h-64 object-cover hover:opacity-90 transition cursor-pointer">
-                <div>
-                    <span class="text-[#b4977b] font-bold text-sm">TÉCNICA AVANÇADA</span>
-                    <h3 class="text-xl font-bold mt-2 text-white">Realismo em Pele Negra</h3>
-                    <p class="text-zinc-600 mt-2 line-clamp-2">Entenda as técnicas de contraste e pigmentação para alcançar artes vibrantes e duradouras em peles retintas.</p>
-                </div>
-                <a href="/peleNegra" class="text-[#b4977b] font-bold text-sm hover:underline uppercase tracking-widest">Ler mais →</a>
-            </article>
+                    <span class="featured-tag">
+                        Destaque do Mês
+                    </span>
 
-            <article class="flex flex-col gap-4">
-                <img src="https://images.pexels.com/photos/2134085/pexels-photo-2134085.jpeg" class="rounded-xl h-64 object-cover hover:opacity-90 transition">
-                <div>
-                    <span class="text-[#b4977b] font-bold text-sm">MATERIAIS ÉTICOS</span>
-                    <h3 class="text-xl font-bold mt-2 text-white">Tintas Veganas e Sustentabilidade</h3>
-                    <p class="text-zinc-600 mt-2 line-clamp-2">Conheça o novo padrão da indústria: pigmentos orgânicos, cruelty-free e seguros para sua saúde.</p>
+                    <span class="featured-index">
+                        01 / 05
+                    </span>
+
                 </div>
-                <a href="/vegan" class="text-[#b4977b] font-bold text-sm hover:underline uppercase tracking-widest">Ler mais →</a>
-            </article>
+
+
+                <div class="featured-text">
+
+                    <h2>
+                        Realismo Negro e Cinza: A Evolução em 2026
+                    </h2>
+
+                    <p>
+                        Conheça as técnicas de sombreamento e retratos 3D que estão definindo o novo padrão de
+                        <strong>realismo em Guarulhos</strong>.
+                    </p>
+
+                    <a href="/realismo" class="featured-button">
+
+                        <span>
+                            Ler Matéria Completa
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
-    </main>
 
-    <footer class="bg-zinc-900 text-zinc-400 py-12 mt-20 border-t border-zinc-800">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-white font-bold mb-4">GUGO TATTOO © 2026</p>
-            <p class="text-sm">Especialista em Realismo e Arte Futurista em Guarulhos.</p>
+    </section>
+
+
+    <!-- =====================================================
+         ARTIGOS
+    ====================================================== -->
+
+    <section class="articles-section">
+
+        <div class="section-heading reveal-up">
+
+            <div>
+                <span>
+                    CONTEÚDO
+                </span>
+
+                <h2>
+                    Mais do universo tattoo
+                </h2>
+            </div>
+
+            <div class="section-line"></div>
+
         </div>
-    </footer>
-    
-    </body>
+
+
+        <div class="articles-grid">
+
+
+            <!-- =================================================
+                 ARTIGO 1
+            ================================================== -->
+
+            <article class="article-card reveal-card">
+
+                <a href="/cuidados" class="article-image">
+
+                    <img
+                        src="{{ url_for('static', filename='imagens/blogs/cuidados/cuidados.jpg') }}"
+                        alt="Cuidados com tatuagem"
+                    >
+
+                    <div class="article-image-overlay"></div>
+
+                    <span class="article-number">
+                        01
+                    </span>
+
+                    <span class="article-plus">
+                        +
+                    </span>
+
+                </a>
+
+
+                <div class="article-content">
+
+                    <span class="article-category">
+                        CUIDADOS & SAÚDE
+                    </span>
+
+                    <h3>
+                        Guia de Cicatrização Pós-Tattoo
+                    </h3>
+
+                    <p>
+                        Aprenda como cuidar da sua tatuagem nos primeiros 30 dias para garantir cores vivas e traços nítidos.
+                    </p>
+
+                    <a href="/cuidados" class="article-link">
+                        <span>Ler mais</span>
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 ARTIGO 2
+            ================================================== -->
+
+            <article class="article-card reveal-card">
+
+                <a href="/estilo" class="article-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=800"
+                        alt="Tatuagem Cyberpunk"
+                    >
+
+                    <div class="article-image-overlay"></div>
+
+                    <span class="article-number">
+                        02
+                    </span>
+
+                    <span class="article-plus">
+                        +
+                    </span>
+
+                </a>
+
+
+                <div class="article-content">
+
+                    <span class="article-category">
+                        ESTILOS FUTURISTAS
+                    </span>
+
+                    <h3>
+                        Cyberpunk: O Futuro na Pele
+                    </h3>
+
+                    <p>
+                        A fusão homem-máquina através de circuitos e luzes neon. A tendência
+                        <strong>geek</strong> que domina os estúdios.
+                    </p>
+
+                    <a href="/estilo" class="article-link">
+                        <span>Ler mais</span>
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 ARTIGO 3
+            ================================================== -->
+
+            <article class="article-card reveal-card">
+
+                <a href="/primeira" class="article-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/2183131/pexels-photo-2183131.jpeg"
+                        alt="Primeira tatuagem"
+                    >
+
+                    <div class="article-image-overlay"></div>
+
+                    <span class="article-number">
+                        03
+                    </span>
+
+                    <span class="article-plus">
+                        +
+                    </span>
+
+                </a>
+
+
+                <div class="article-content">
+
+                    <span class="article-category">
+                        GUIA INICIANTE
+                    </span>
+
+                    <h3>
+                        Sua Primeira Tatuagem: Guia Prático
+                    </h3>
+
+                    <p>
+                        Tudo sobre dor, escolha do local e como selecionar o melhor
+                        <strong>tatuador em Guarulhos</strong> para seu projeto.
+                    </p>
+
+                    <a href="/primeira" class="article-link">
+                        <span>Ler mais</span>
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 ARTIGO 4
+            ================================================== -->
+
+            <article class="article-card reveal-card">
+
+                <a href="/peleNegra" class="article-image">
+
+                    <img
+                        src="https://img.freepik.com/fotos-premium/mulher-com-extensas-tatuagens-posando-contra-um-fundo-cinzento_305419-10495.jpg?semt=ais_hybrid&w=740&q=80"
+                        alt="Realismo em Pele Negra"
+                    >
+
+                    <div class="article-image-overlay"></div>
+
+                    <span class="article-number">
+                        04
+                    </span>
+
+                    <span class="article-plus">
+                        +
+                    </span>
+
+                </a>
+
+
+                <div class="article-content">
+
+                    <span class="article-category">
+                        TÉCNICA AVANÇADA
+                    </span>
+
+                    <h3>
+                        Realismo em Pele Negra
+                    </h3>
+
+                    <p>
+                        Entenda as técnicas de contraste e pigmentação para alcançar artes vibrantes e duradouras em peles retintas.
+                    </p>
+
+                    <a href="/peleNegra" class="article-link">
+                        <span>Ler mais</span>
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 ARTIGO 5
+            ================================================== -->
+
+            <article class="article-card reveal-card">
+
+                <a href="/vegan" class="article-image">
+
+                    <img
+                        src="https://images.pexels.com/photos/2134085/pexels-photo-2134085.jpeg"
+                        alt="Tintas Veganas e Sustentabilidade"
+                    >
+
+                    <div class="article-image-overlay"></div>
+
+                    <span class="article-number">
+                        05
+                    </span>
+
+                    <span class="article-plus">
+                        +
+                    </span>
+
+                </a>
+
+
+                <div class="article-content">
+
+                    <span class="article-category">
+                        MATERIAIS ÉTICOS
+                    </span>
+
+                    <h3>
+                        Tintas Veganas e Sustentabilidade
+                    </h3>
+
+                    <p>
+                        Conheça o novo padrão da indústria: pigmentos orgânicos, cruelty-free e seguros para sua saúde.
+                    </p>
+
+                    <a href="/vegan" class="article-link">
+                        <span>Ler mais</span>
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+
+            <p class="footer-logo">
+                GUGO TATTOO
+            </p>
+
+            <p>
+                GUGO TATTOO © 2026
+            </p>
+
+        </div>
+
+
+        <div class="footer-description">
+
+            <p>
+                Especialista em Realismo e Arte Futurista em Guarulhos.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <span>
+            BLOG / GUGO TATTOO
+        </span>
+
+        <span>
+            GUARULHOS — SP
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT / GSAP
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+
+    /* =====================================================
+       NAVBAR
+    ====================================================== */
+
+    const navbar = document.getElementById("navbar");
+
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", () => {
+
+        const currentScroll = window.scrollY;
+
+        if (currentScroll > 40) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+
+        lastScroll = currentScroll;
+
+    });
+
+
+    /* =====================================================
+       MENU MOBILE
+    ====================================================== */
+
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navList = document.getElementById("nav-list");
+
+    mobileMenu.addEventListener("click", () => {
+
+        mobileMenu.classList.toggle("is-active");
+        navList.classList.toggle("active");
+
+        document.body.classList.toggle("menu-open");
+
+    });
+
+
+    document.querySelectorAll(".ul-nav a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mobileMenu.classList.remove("is-active");
+            navList.classList.remove("active");
+            document.body.classList.remove("menu-open");
+
+        });
+
+    });
+
+
+    /* =====================================================
+       ENTRADA DO HEADER
+    ====================================================== */
+
+    gsap.from(".reveal-header", {
+
+        opacity: 0,
+        y: 50,
+        duration: 1.2,
+        ease: "power4.out"
+
+    });
+
+
+    gsap.from(".header-line", {
+
+        scaleY: 0,
+        transformOrigin: "top",
+        duration: 1.2,
+        delay: 0.2,
+        ease: "power4.out"
+
+    });
+
+
+    gsap.from(".header-number", {
+
+        opacity: 0,
+        x: 30,
+        duration: 1,
+        delay: 0.5,
+        ease: "power3.out"
+
+    });
+
+
+    /* =====================================================
+       MATÉRIA DESTAQUE
+    ====================================================== */
+
+    gsap.from(".reveal-featured", {
+
+        opacity: 0,
+        y: 80,
+        scale: 0.97,
+        duration: 1.3,
+        delay: 0.2,
+        ease: "power4.out"
+
+    });
+
+
+    gsap.from(".featured-text > *", {
+
+        opacity: 0,
+        y: 35,
+        duration: 0.9,
+        stagger: 0.12,
+        delay: 0.7,
+        ease: "power3.out"
+
+    });
+
+
+    /* =====================================================
+       ARTIGOS
+    ====================================================== */
+
+    gsap.utils.toArray(".reveal-up").forEach(element => {
+
+        gsap.from(element, {
+
+            scrollTrigger: {
+                trigger: element,
+                start: "top 85%",
+                once: true
+            },
+
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power3.out"
+
+        });
+
+    });
+
+
+    gsap.utils.toArray(".reveal-card").forEach((card, index) => {
+
+        gsap.from(card, {
+
+            scrollTrigger: {
+                trigger: card,
+                start: "top 88%",
+                once: true
+            },
+
+            opacity: 0,
+            y: 70,
+            duration: 0.9,
+            delay: (index % 3) * 0.1,
+            ease: "power3.out"
+
+        });
+
+    });
+
+
+    /* =====================================================
+       PARALLAX DAS IMAGENS
+    ====================================================== */
+
+    gsap.utils.toArray(".article-image img").forEach(image => {
+
+        gsap.to(image, {
+
+            yPercent: 8,
+
+            scrollTrigger: {
+                trigger: image.closest(".article-image"),
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1
+            }
+
+        });
+
+    });
+
+
+    /* =====================================================
+       HOVER NOS CARDS
+    ====================================================== */
+
+    document.querySelectorAll(".article-card").forEach(card => {
+
+        const image = card.querySelector("img");
+        const plus = card.querySelector(".article-plus");
+
+        card.addEventListener("mouseenter", () => {
+
+            gsap.to(image, {
+                scale: 1.08,
+                duration: 0.7,
+                ease: "power3.out"
+            });
+
+            gsap.to(plus, {
+                rotation: 90,
+                scale: 1.1,
+                duration: 0.5,
+                ease: "power3.out"
+            });
+
+        });
+
+
+        card.addEventListener("mouseleave", () => {
+
+            gsap.to(image, {
+                scale: 1,
+                duration: 0.7,
+                ease: "power3.out"
+            });
+
+            gsap.to(plus, {
+                rotation: 0,
+                scale: 1,
+                duration: 0.5,
+                ease: "power3.out"
+            });
+
+        });
+
+    });
+
+
+    /* =====================================================
+       HOVER MATÉRIA PRINCIPAL
+    ====================================================== */
+
+    const featuredCard = document.querySelector(".featured-card");
+
+    if (featuredCard) {
+
+        featuredCard.addEventListener("mousemove", (event) => {
+
+            const rect = featuredCard.getBoundingClientRect();
+
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            const rotateY = ((x / rect.width) - 0.5) * 2;
+            const rotateX = ((y / rect.height) - 0.5) * -2;
+
+            gsap.to(featuredCard, {
+
+                rotateX: rotateX,
+                rotateY: rotateY,
+                duration: 0.4,
+                ease: "power2.out",
+                transformPerspective: 1200
+
+            });
+
+        });
+
+
+        featuredCard.addEventListener("mouseleave", () => {
+
+            gsap.to(featuredCard, {
+
+                rotateX: 0,
+                rotateY: 0,
+                duration: 0.7,
+                ease: "power3.out"
+
+            });
+
+        });
+
+    }
+
+
+    /* =====================================================
+       REFRESH SCROLLTRIGGER
+    ====================================================== */
+
+    window.addEventListener("load", () => {
+
+        ScrollTrigger.refresh();
+
+    });
+
+});
+
+</script>
+
+</body>
 </html>

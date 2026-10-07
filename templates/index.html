@@ -1,630 +1,1611 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gugo Tattoo | Estúdio de Tatuagem em Guarulhos - Tattoo Profissional</title>
 
-    <meta name="description" content="Gugo Tattoo é estúdio de tatuagem em Guarulhos especializado em tatuagens personalizadas, realismo, fine line e blackwork. Atendimento profissional, ambiente seguro e materiais esterilizados. Agende sua tattoo!">
+    <title>Gugo Tatto | Estúdio de Tatuagem em Guarulhos - Tattoo Profissional</title>
 
-<meta name="keywords" content="Gugo Tattoo, tatuagem em Guarulhos, estúdio de tatuagem Guarulhos, tattoo Guarulhos, tatuador em Guarulhos, tatuagem realista, fine line, blackwork, tatuagem personalizada, melhor tatuador Guarulhos">
+    <meta name="description" content="Gugo Tatto é estúdio de tatuagem em Guarulhos especializado em tatuagens personalizadas, realismo, fine line e blackwork. Atendimento profissional, ambiente seguro e materiais esterilizados. Agende sua tattoo!">
 
-<meta name="author" content="Gugo Tatto">
-<meta name="robots" content="index, follow">
-<meta name="language" content="pt-BR">
-<meta name="revisit-after" content="7 days">
+    <meta name="keywords" content="Gugo Tatto, tatuagem em Guarulhos, estúdio de tatuagem Guarulhos, tattoo Guarulhos, tatuador em Guarulhos, tatuagem realista, fine line, blackwork, tatuagem personalizada, melhor tatuador Guarulhos">
 
-<link rel="canonical" href="https://www.gugotatto.com.br/">
+    <meta name="author" content="Gugo Tatto">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt-BR">
+    <meta name="revisit-after" content="7 days">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Gugo Tattoo | Estúdio de Tatuagem em Guarulhos">
-<meta property="og:description" content="Estúdio de tatuagem em Guarulhos especializado em tattoos personalizadas, realismo e fine line. Agende sua sessão no Gugo Tattoo.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.gugotatto.com.br/">
-<meta property="og:image" content="https://www.gugotatto.com.br/imagens/estudio-gugo-tatto.jpg">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="Gugo Tatto">
+    <link rel="canonical" href="https://www.gugotatto.com.br/">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Gugo Tattoo | Estúdio de Tatuagem em Guarulhos">
-<meta name="twitter:description" content="Tatuagem profissional em Guarulhos com qualidade, segurança e estilo. Conheça o Gugo Tattoo.">
-<meta name="twitter:image" content="https://www.gugotatto.com.br/imagens/estudio-gugo-tatto.jpg">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gugo Tatto | Estúdio de Tatuagem em Guarulhos">
+    <meta property="og:description" content="Estúdio de tatuagem em Guarulhos especializado em tattoos personalizadas, realismo e fine line. Agende sua sessão no Gugo Tatto.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gugotatto.com.br/">
+    <meta property="og:image" content="https://www.gugotatto.com.br/imagens/estudio-gugo-tatto.jpg">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Gugo Tatto">
 
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="{{ url_for('static', filename='imagens/gugologo.png') }}">
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gugo Tatto | Estúdio de Tatuagem em Guarulhos">
+    <meta name="twitter:description" content="Tatuagem profissional em Guarulhos com qualidade, segurança e estilo. Conheça o Gugo Tatto.">
+    <meta name="twitter:image" content="https://www.gugotatto.com.br/imagens/estudio-gugo-tatto.jpg">
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagens/gugologo.png') }}">
 
-<!-- Schema Markup Local Business -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TattooParlor",
-  "name": "Gugo Tattoo",
-  "image": "https://www.gugotatto.com.br/imagens/estudio-gugo-tatto.jpg",
-  "@id": "https://www.gugotattoo.com.br/",
-  "url": "https://www.gugotattoo.com.br/",
-  "telephone": "+55 (11) 99210-5793",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Rua João Bueno, 155",
-    "addressLocality": "Guarulhos",
-    "addressRegion": "SP",
-    "postalCode": "07114-420",
-    "addressCountry": "BR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "-23.4537",
-    "longitude": "-46.5333"
-  },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "10:00",
-    "closes": "20:00"
-  }],
-  "sameAs": [
-    "https://www.instagram.com/gugotattoo",
-    "https://www.facebook.com/gugotattoo"
-  ]
-}
-</script>
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Schema Markup Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TattooParlor",
+      "name": "Gugo Tatto",
+      "image": "https://www.gugotatto.com.br/imagens/estudio-gugo-tatto.jpg",
+      "@id": "https://www.gugotatto.com.br/",
+      "url": "https://www.gugotatto.com.br/",
+      "telephone": "+55 (11) 99210-5793",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua João Bueno, 155",
+        "addressLocality": "Guarulhos",
+        "addressRegion": "SP",
+        "postalCode": "07114-420",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.4537",
+        "longitude": "-46.5333"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "20:00"
+      }],
+      "sameAs": [
+        "https://www.instagram.com/gugotatto",
+        "https://www.facebook.com/gugotatto"
+      ]
+    }
+    </script>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}?v={{ time }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body class="overflow-x-hidden">
-    
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
     <nav>
-    <div class="logo">
-        <a href="#"><img src="{{ url_for('static', filename='imagens/gugologo.webp') }}" class="animar-esquerda"></a>
-    </div>
-
-    <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
-
-    <ul class="ul-nav aparecer" id="nav-list">
-        <li><a href="/" class="active"><strong>home</strong></a></li>
-        <li><a href="/galeria"><strong>Galeria</strong></a></li>
-        <li><a href="/estudio"><strong>Estudio</strong></a></li>
-        <li><a href="/blog"><strong>Blog</strong></a></li>
-        <li><a href="/atendimento"><strong>Atendimento</strong></a></li>
-    </ul>
-</nav>
-
-<a href="https://wa.me/5511992105793?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20fazer%20uma%20tatuagem." target="_blank" 
-   class="fixed bottom-6 right-6 z-[100] bg-[#25D366] p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 flex items-center justify-center group">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.94 3.659 1.434 5.628 1.435h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-    </svg>
-
-    <span class="absolute right-16 bg-white text-black text-xs font-bold px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
-        Agende agora
-    </span>
-</a>
-
-    <section class="banner overflow-x-hidden"> 
-    <div class="conteudo">
-    <h1 class="animar-esquerda">O Melhor Estúdio de Tatuagem <span class="text-[#b4977b]">em Guarulhos</span></h1>
-    <p class="text-white animar-esquerda">
-      Especialistas em Realismo, Fine Line e Coberturas.
-    </p>
-    <a href="https://wa.me/5511992105793?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20fazer%20uma%20tatuagem." 
-   target="_blank" class="botao aparecer">AGENDE SEU HORÁRIO</a>
-  </div>
-</section>
-<section class="sobre py-4 overflow-x-hidden">
-  <div class="rounded-xl">
-    <picture>
-        <source media="(max-width: 900px )" srcset="{{ url_for('static', filename='imagens/sobre1.webp') }}">
-        <img src="{{ url_for('static', filename='imagens/sobre1.webp') }}" alt="" class="animar-esquerda">
-    </picture>
-    </div>
-    <div class="conteudo2 text-white">
-      <h2 class="animar-direita"><strong>SOBRE NÓS</strong></h2>
-      <p class="animar-direita">No <strong>Gugo Tattoo</strong>, transformamos ideias em <strong>arte na pele</strong> com máxima precisão. 
-  Localizado estrategicamente em <strong>Guarulhos (SP)</strong>, proximo ao Bosque Maia nosso estúdio é referência para quem busca 
-  <strong>tatuagens exclusivas</strong> e <strong>aplicação de piercing</strong> com total segurança e biossegurança.
-  <br><br>
-  Especialistas em diversos estilos, do <strong>Fine Line ao Realismo</strong>, acreditamos que cada traço conta uma história. 
-  Seja para sua <strong>primeira tatuagem</strong> ou para um projeto de fechamento, entregamos 
-  <strong>arte permanente</strong> feita com materiais de alta qualidade e pigmentos aprovados.
-  <br><br>
-  Nosso compromisso com a saúde é rigoroso: trabalhamos em um ambiente 100% higienizado, utilizando 
-  <strong>materiais descartáveis e esterilizados</strong>. Nossa equipe de <strong>tatuadores profissionais em Guarulhos</strong> 
-  garante uma experiência confortável, transformando dor e tinta em uma expressão única de identidade.
-  <br><br>
-  Venha conhecer o <strong>melhor estúdio de tatuagem de Guarulhos</strong> e traduza sua emoção em um desenho eterno. 
-  <strong>Gugo Tattoo: Arte, técnica e alma.</strong></p>
-      <br><br>
-    </div>
-</section>
-<section class="py-4 overflow-x-hidden">
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-6 bg-black">
-  <div class="aparecer flex flex-col items-start p-5 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-gold-500 transition-all group">
-    <div class="mb-4 text-amber-500 bg-amber-500/10 p-2 rounded-lg group-hover:bg-amber-500 group-hover:text-black transition-colors">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-clock-icon lucide-calendar-clock"><path d="M16 14v2.2l1.6 1"/><path d="M16 2v4"/><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M3 10h5"/><path d="M8 2v4"/><circle cx="16" cy="16" r="6"/></svg>
-    </div>
-    <h3 class="text-white font-semibold text-lg leading-tight">Tatuadores Experientes: +10 Anos de História</h3>
-  </div>
-  <div class="aparecer flex flex-col items-start p-5 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-gold-500 transition-all group">
-    <div class="mb-4 text-amber-500 bg-amber-500/10 p-2 rounded-lg group-hover:bg-amber-500 group-hover:text-black transition-colors">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gem-icon lucide-gem"><path d="M10.5 3 8 9l4 13 4-13-2.5-6"/><path d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z"/><path d="M2 9h20"/></svg>
-    </div>
-    <h3 class="text-white font-semibold text-lg leading-tight">Experiência Premium e Relaxante</h3>
-  </div>
-  <div class="aparecer flex flex-col items-start p-5 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-gold-500 transition-all group">
-    <div class="mb-4 text-amber-500 bg-amber-500/10 p-2 rounded-lg group-hover:bg-amber-500 group-hover:text-black transition-colors">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
-    </div>
-    <h3 class="text-white font-semibold text-lg leading-tight">Segurança Máxima: Certificado ANVISA</h3>
-  </div>
-  <div class="aparecer flex flex-col items-start p-5 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-gold-500 transition-all group">
-    <div class="mb-4 text-amber-500 bg-amber-500/10 p-2 rounded-lg group-hover:bg-amber-500 group-hover:text-black transition-colors">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-check-icon lucide-user-round-check"><path d="M2 21a8 8 0 0 1 13.292-6"/><circle cx="10" cy="8" r="5"/><path d="m16 19 2 2 4-4"/></svg>
-    </div>
-    <h3 class="text-white font-semibold text-lg leading-tight">Projetos Exclusivos</h3>
-  </div>
-
-  </div>
-</section>
-<section class="profissionais py-4">
-
-    <h2 class="aparecer"><strong>Nosso time</strong></h2>
-    <p class="aparecer text-center w-full px-15 pb-10 text-white/40">Conheça os artistas que transformam ideias em obras de arte na pele. 
-    Contamos com uma equipe diversificada, especializada em diversas técnicas 
-    para garantir que sua tatuagem seja única e impecável.</p>
-
-<div class="carousel-container">
-    <button class="prev-btn" onclick="moveCarousel(-1)" aria-label="Anterior">&#10094;</button>
-    
-    <div class="carousel-viewport">
-        <div class="carousel" id="carouselSlider">
-            
-            <div class="card aparecer">
-                <img src="{{ url_for('static', filename='imagens/gugo1.webp') }}" alt="Tatuagem de Realismo Negro e Cinza feita em Guarulhos - Artista Gugo Tattoo">
-                <h3 class="font-bold text-2xl italic">Gugo Tattoo</h3>
-                <span class="font-semibold text-[#b4977b]">Tatuagem Realismo</span>
-                <p class="mx-2">Especialista em Realismo de Alto Impacto e Retratos 3D, Gugo transforma a pele em arte viva. Com técnica apurada, foca na precisão de texturas e sombras profundas para criar retratos que beiram a fotografia</p>
-                <div class="botoes">
-                    <button class="button"><a href="https://www.instagram.com/gugotattoo" target="_blank">Instagram</a></button>
-                    <button class="button"><a href="/galeria">Portfolio</a></button>
-                </div>
-            </div>
-
-            <div class="card aparecer">
-                <img src="{{ url_for('static', filename='imagens/edgar.webp') }}" alt="Tatuagem de Realismo feita em Guarulhos - Artista Edgar">
-                <h3 class="font-bold text-2xl italic">Edgar</h3>
-                <span class="font-semibold text-[#b4977b]">Tatuagem Realismo</span>
-                <p class="mx-2">Edgar domina o equilíbrio entre o impacto do realismo e a sutileza do fine line. Seja em grandes projetos ou artes minimalistas, entrega detalhes impecáveis com traços e sombras precisas.</p>
-                <div class="botoes">
-                    <button class="button"><a href="https://www.instagram.com/eddy.tattoo" target="_blank">Instagram</a></button>
-                    <button class="button"><a href="/galeria">Portfolio</a></button>
-                </div>
-            </div>
-
-            <div class="card aparecer">
-                <img src="{{ url_for('static', filename='imagens/gih.webp') }}" alt="Tatuagem de Fine Line e Delicadas feita em Guarulhos - Artista Gislaine">
-                <h3 class="font-bold text-2xl italic">Gislaine</h3>
-                <span class="font-semibold text-[#b4977b]">Tatuagem Fine Line</span>
-                <p class="mx-2">Referência em Tatuagens Delicadas, Fine Line e Estilo Ornamental, Gislaine foca no público feminino. Seu trabalho une sofisticação e leveza, valorizando a estética do corpo com traços finos e elegantes.</p>
-                <div class="botoes">
-                    <button class="button"><a href="https://www.instagram.com/gih.tattoo" target="_blank">Instagram</a></button>
-                    <button class="button"><a href="/galeria">Portfolio</a></button>
-                </div>
-            </div>
-
-            <div class="card aparecer">
-                <img src="{{ url_for('static', filename='imagens/shira.webp') }}" alt="Tatuagem de artes sutis e traço fino feita em Guarulhos - Artista Shira">
-                <h3 class="font-bold text-2xl italic">Shira</h3>
-                <span class="font-semibold text-[#b4977b]">Tatuagem Fine Line</span>
-                <p class="mx-2">Mestre do traço ultra-fino, Shira cria artes sutis e cheias de significado. Seu estilo é marcado pela limpeza e harmonia, ideal para quem busca uma tatuagem minimalista com acabamento impecável.</p>
-                <div class="botoes">
-                    <button class="button"><a href="https://www.instagram.com/rshiratoritattoo" target="_blank">Instagram</a></button>
-                    <button class="button"><a href="/galeria">Portfolio</a></button>
-                </div>
-            </div>
-
-            <div class="card aparecer">
-                <img src="{{ url_for('static', filename='imagens/eryck.webp') }}" alt="Eryck Tattoo">
-                <h3 class="font-bold text-2xl italic">Eryck Tattoo</h3>
-                <span class="font-semibold text-[#b4977b]">Tatuagem Cobertura</span>
-                <p class="mx-2">Mestre em Cover-up (Cobertura de Tatuagem) e Reformas de Arte. Eryck utiliza sua técnica avançada para transformar tatuagens antigas em novas obras de arte, devolvendo a autoestima aos clientes.</p>
-                <div class="botoes">
-                    <button class="button"><a href="https://www.instagram.com/erycktattoo01/" target="_blank">Instagram</a></button>
-                    <button class="button"><a href="/galeria">Portfolio</a></button>
-                </div>
-            </div>
-
-            <div class="card aparecer">
-                <img src="{{ url_for('static', filename='imagens/luana.webp') }}" alt="Tatuagem de Realismo Negro e Cinza feita em Guarulhos - Artista Luana">
-                <h3 class="font-bold text-2xl italic">Luana</h3>
-                <span class="font-semibold text-[#b4977b]">Tatuagem Realismo</span>
-                <p class="mx-2">Luana dedica-se ao realismo com foco em suavidade e contraste. Captura expressões de forma fiel e artística, garantindo projetos sólidos e detalhados que impressionam pela fluidez das sombras.</p>
-                <div class="botoes">
-                    <button class="button"><a href="https://www.instagram.com/lua.lulitattoo" target="_blank">Instagram</a></button>
-                    <button class="button"><a href="/galeria">Portfolio</a></button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <button class="next-btn" onclick="moveCarousel(1)" aria-label="Próximo">&#10095;</button>
-</div>
-</section>
-<section class="bannerorç">
-  
-  <div class="orçconteudo">
-    <h2 class="h1orç aparecer">pronto para sua proxima <br> <span>tatuagem</span></h2>
-    <p class="porç text-white aparecer">Com dedicação, segurança e criatividade, damos vida à sua ideia através da tatuagem <br> Nosso compromisso é entregar arte de qualidade, feita com cuidado, técnica e o respeito que sua pele merece.</p>
-    <div class="button-animate aparecer">
-      <a href="https://wa.me/5511992105793?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20fazer%20uma%20tatuagem." 
-   target="_blank" class="buttonorç">fazer orçamento</a>
-    </div>
-  </div>
-</section>
-<section class="bg-black py-10 pt-30 px-6 border-t border-zinc-900">
-    <div class="max-w-7xl mx-auto">
-        
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
-            <div class="w-full md:w-auto">
-                <span class="text-[#b4977b] font-bold text-xs uppercase tracking-[0.4em] mb-2 block">O Jornal</span>
-                <h2 class="text-4xl md:text-6xl font-bold text-white uppercase tracking-tighter leading-none">
-                    Cultura <span class="italic font-bold text-[#b4977b]">&</span> Arte
-                </h2>
-            </div>
-            <a href="/blog" class="group text-zinc-500 hover:text-[#b4977b] transition-all duration-300 text-xs uppercase tracking-widest flex items-center gap-2 border-b border-zinc-800 pb-2">
-                Explorar arquivo <span class="group-hover:translate-x-1 transition-transform">→</span>
+        <div class="logo">
+            <a href="/">
+                <img
+                    src="{{ url_for('static', filename='imagens/gugologo.webp') }}"
+                    class="animar-esquerda"
+                    alt="Gugo Tattoo"
+                >
             </a>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            
-            <div class="lg:col-span-8 group relative overflow-hidden bg-zinc-950 border border-zinc-900 transition-colors rounded duration-500 hover:border-[#b4977b]/30">
-                <div class="aspect-[16/9] overflow-hidden">
-                    <img src="{{ url_for('static', filename='imagens/blogs/cuidados/cuidados.jpg') }}" 
-                         class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105 transition duration-1000" alt="Cicatrização">
+        <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="ul-nav aparecer" id="nav-list">
+            <li>
+                <a href="/" class="active">
+                    <strong>home</strong>
+                </a>
+            </li>
+
+            <li>
+                <a href="/galeria">
+                    <strong>Galeria</strong>
+                </a>
+            </li>
+
+            <li>
+                <a href="/estudio">
+                    <strong>Estudio</strong>
+                </a>
+            </li>
+
+            <li>
+                <a href="/blog">
+                    <strong>Blog</strong>
+                </a>
+            </li>
+
+            <li>
+                <a href="/atendimento">
+                    <strong>Atendimento</strong>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- =====================================================
+         WHATSAPP
+    ====================================================== -->
+
+    <a
+        href="https://wa.me/5511992105793?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20fazer%20uma%20tatuagem."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-float group"
+        aria-label="Agendar pelo WhatsApp"
+    >
+
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="white"
+            aria-hidden="true"
+        >
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.94 3.659 1.434 5.628 1.435h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+
+        <span class="whatsapp-tooltip">
+            Agende agora
+        </span>
+    </a>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="banner">
+
+        <div class="hero-noise"></div>
+
+        <div class="conteudo">
+
+            <div class="hero-kicker aparecer">
+                <span></span>
+                GUGO TATTO
+                <span></span>
+            </div>
+
+            <h1 class="animar-esquerda">
+                O Melhor Estúdio de Tatuagem
+                <span class="text-[#b4977b]">em Guarulhos</span>
+            </h1>
+
+            <p class="text-white animar-esquerda">
+                Especialistas em Realismo, Fine Line e Coberturas.
+            </p>
+
+            <div class="hero-actions aparecer">
+
+                <a
+                    href="https://wa.me/5511992105793?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20fazer%20uma%20tatuagem."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="botao"
+                >
+                    AGENDE SEU HORÁRIO
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="/galeria" class="hero-secondary">
+                    VER GALERIA
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-scroll">
+            <span>SCROLL</span>
+            <div></div>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SOBRE NÓS
+    ====================================================== -->
+
+    <section class="sobre py-4 overflow-x-hidden">
+
+        <div class="sobre-image-wrap rounded-xl">
+
+            <div class="sobre-image-glow"></div>
+
+            <picture>
+                <source
+                    media="(max-width: 900px)"
+                    srcset="{{ url_for('static', filename='imagens/sobre1.webp') }}"
+                >
+
+                <img
+                    src="{{ url_for('static', filename='imagens/sobre1.webp') }}"
+                    alt="Estúdio Gugo Tattoo em Guarulhos"
+                    class="animar-esquerda sobre-image"
+                >
+            </picture>
+
+            <div class="sobre-image-label aparecer">
+                <span>01</span>
+                <strong>ARTE NA PELE</strong>
+            </div>
+
+        </div>
+
+        <div class="conteudo2 text-white">
+
+            <div class="section-label aparecer">
+                <span>01</span>
+                <i></i>
+                SOBRE NÓS
+            </div>
+
+            <h2 class="animar-direita">
+                <strong>SOBRE NÓS</strong>
+            </h2>
+
+            <p class="animar-direita">
+                No <strong>Gugo Tattoo</strong>, transformamos ideias em <strong>arte na pele</strong> com máxima precisão.
+                Localizado estrategicamente em <strong>Guarulhos (SP)</strong>, proximo ao Bosque Maia nosso estúdio é referência para quem busca
+                <strong>tatuagens exclusivas</strong> e <strong>aplicação de piercing</strong> com total segurança e biossegurança.
+
+                <br><br>
+
+                Especialistas em diversos estilos, do <strong>Fine Line ao Realismo</strong>, acreditamos que cada traço conta uma história.
+                Seja para sua <strong>primeira tatuagem</strong> ou para um projeto de fechamento, entregamos
+                <strong>arte permanente</strong> feita com materiais de alta qualidade e pigmentos aprovados.
+
+                <br><br>
+
+                Nosso compromisso com a saúde é rigoroso: trabalhamos em um ambiente 100% higienizado, utilizando
+                <strong>materiais descartáveis e esterilizados</strong>. Nossa equipe de <strong>tatuadores profissionais em Guarulhos</strong>
+                garante uma experiência confortável, transformando dor e tinta em uma expressão única de identidade.
+
+                <br><br>
+
+                Venha conhecer o <strong>melhor estúdio de tatuagem de Guarulhos</strong> e traduza sua emoção em um desenho eterno.
+                <strong>Gugo Tattoo: Arte, técnica e alma.</strong>
+            </p>
+
+            <br><br>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DIFERENCIAIS
+    ====================================================== -->
+
+    <section class="diferenciais-section py-4 overflow-x-hidden">
+
+        <div class="diferenciais-grid">
+
+            <div class="diferencial-card aparecer">
+
+                <div class="diferencial-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+
+                        <path d="M16 14v2.2l1.6 1"/>
+                        <path d="M16 2v4"/>
+                        <path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/>
+                        <path d="M3 10h5"/>
+                        <path d="M8 2v4"/>
+                        <circle cx="16" cy="16" r="6"/>
+
+                    </svg>
                 </div>
-                
-                <div class="p-10">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="bg-[#b4977b] text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-tighter">Essencial</span>
-                        <span class="text-zinc-500 text-[10px] uppercase tracking-widest">10 Mar 2026</span>
+
+                <span>01</span>
+
+                <h3>
+                    Tatuadores Experientes: +10 Anos de História
+                </h3>
+
+                <div class="card-line"></div>
+
+            </div>
+
+
+            <div class="diferencial-card aparecer">
+
+                <div class="diferencial-icon">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+
+                        <path d="M10.5 3 8 9l4 13 4-13-2.5-6"/>
+                        <path d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.246 0L2.387 10.182A2 2 0 0 1 2.4 7.8l3-4A2 2 0 0 1 7 3z"/>
+                        <path d="M3 8h18"/>
+                        <path d="M8.5 3 12 8l3.5-5"/>
+
+                    </svg>
+
+                </div>
+
+                <span>02</span>
+
+                <h3>
+                    Qualidade e Precisão em Cada Traço
+                </h3>
+
+                <div class="card-line"></div>
+
+            </div>
+
+
+            <div class="diferencial-card aparecer">
+
+                <div class="diferencial-icon">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="m9 12 2 2 4-4"/>
+
+                    </svg>
+
+                </div>
+
+                <span>03</span>
+
+                <h3>
+                    Ambiente Seguro e Biossegurança
+                </h3>
+
+                <div class="card-line"></div>
+
+            </div>
+
+
+            <div class="diferencial-card aparecer">
+
+                <div class="diferencial-icon">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+
+                        <path d="M2 21a8 8 0 0 1 13.292-6"/>
+                        <circle cx="10" cy="8" r="5"/>
+                        <path d="m16 19 2 2 4-4"/>
+
+                    </svg>
+
+                </div>
+
+                <span>04</span>
+
+                <h3>
+                    Projetos Exclusivos
+                </h3>
+
+                <div class="card-line"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         NOSSO TIME
+    ====================================================== -->
+
+    <section class="profissionais py-4">
+
+        <div class="section-label section-label-center aparecer">
+            <span>02</span>
+            <i></i>
+            NOSSA EQUIPE
+        </div>
+
+        <h2 class="aparecer">
+            <strong>Nosso time</strong>
+        </h2>
+
+        <p class="aparecer text-center w-full px-15 pb-10 text-white/40">
+            Conheça os artistas que transformam ideias em obras de arte na pele.
+            Contamos com uma equipe diversificada, especializada em diversas técnicas
+            para garantir que sua tatuagem seja única e impecável.
+        </p>
+
+
+        <div class="carousel-container">
+
+            <button
+                class="prev-btn"
+                onclick="moveCarousel(-1)"
+                aria-label="Anterior"
+            >
+                &#10094;
+            </button>
+
+
+            <div class="carousel-viewport">
+
+                <div class="carousel" id="carouselSlider">
+
+
+                    <!-- GUGO -->
+
+                    <div class="card aparecer">
+
+                        <div class="artist-image">
+                            <img
+                                src="{{ url_for('static', filename='imagens/gugo1.webp') }}"
+                                alt="Tatuagem de Realismo Negro e Cinza feita em Guarulhos - Artista Gugo Tattoo"
+                            >
+
+                            <div class="artist-number">01</div>
+                        </div>
+
+                        <h3 class="font-bold text-2xl italic">
+                            Gugo Tattoo
+                        </h3>
+
+                        <span class="font-semibold text-[#b4977b]">
+                            Tatuagem Realismo
+                        </span>
+
+                        <p class="mx-2">
+                            Especialista em Realismo de Alto Impacto e Retratos 3D, Gugo transforma a pele em arte viva.
+                            Com técnica apurada, foca na precisão de texturas e sombras profundas para criar retratos que beiram a fotografia
+                        </p>
+
+                        <div class="botoes">
+
+                            <button class="button">
+                                <a
+                                    href="https://www.instagram.com/gugotattoo"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Instagram
+                                </a>
+                            </button>
+
+                            <button class="button">
+                                <a href="/galeria">
+                                    Portfolio
+                                </a>
+                            </button>
+
+                        </div>
+
                     </div>
-                    <h3 class="text-3xl md:text-4xl font-semibold text-white mb-4 group-hover:text-[#b4977b] transition-colors duration-300">
-                        Guia de Cuidados e Cicatrização de Tatuagem
-                    </h3>
-                    <p class="text-zinc-400 font-light leading-relaxed max-w-2xl mb-6">
-                        A preservação da arte começa no momento em que a agulha para. Entenda o processo biológico e os cuidados térmicos essenciais.
+
+
+                    <!-- EDGAR -->
+
+                    <div class="card aparecer">
+
+                        <div class="artist-image">
+
+                            <img
+                                src="{{ url_for('static', filename='imagens/edgar.webp') }}"
+                                alt="Tatuagem de Realismo feita em Guarulhos - Artista Edgar"
+                            >
+
+                            <div class="artist-number">02</div>
+
+                        </div>
+
+                        <h3 class="font-bold text-2xl italic">
+                            Edgar
+                        </h3>
+
+                        <span class="font-semibold text-[#b4977b]">
+                            Tatuagem Realismo
+                        </span>
+
+                        <p class="mx-2">
+                            Edgar domina o equilíbrio entre o impacto do realismo e a sutileza do fine line.
+                            Seja em grandes projetos ou artes minimalistas, entrega detalhes impecáveis com traços e sombras precisas.
+                        </p>
+
+                        <div class="botoes">
+
+                            <button class="button">
+                                <a
+                                    href="https://www.instagram.com/eddy.tattoo"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Instagram
+                                </a>
+                            </button>
+
+                            <button class="button">
+                                <a href="/galeria">
+                                    Portfolio
+                                </a>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- GISLAINE -->
+
+                    <div class="card aparecer">
+
+                        <div class="artist-image">
+
+                            <img
+                                src="{{ url_for('static', filename='imagens/gih.webp') }}"
+                                alt="Tatuagem de Fine Line e Delicadas feita em Guarulhos - Artista Gislaine"
+                            >
+
+                            <div class="artist-number">03</div>
+
+                        </div>
+
+                        <h3 class="font-bold text-2xl italic">
+                            Gislaine
+                        </h3>
+
+                        <span class="font-semibold text-[#b4977b]">
+                            Tatuagem Fine Line
+                        </span>
+
+                        <p class="mx-2">
+                            Referência em Tatuagens Delicadas, Fine Line e Estilo Ornamental, Gislaine foca no público feminino.
+                            Seu trabalho une sofisticação e leveza, valorizando a estética do corpo com traços finos e elegantes.
+                        </p>
+
+                        <div class="botoes">
+
+                            <button class="button">
+                                <a
+                                    href="https://www.instagram.com/gih.tattoo"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Instagram
+                                </a>
+                            </button>
+
+                            <button class="button">
+                                <a href="/galeria">
+                                    Portfolio
+                                </a>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SHIRA -->
+
+                    <div class="card aparecer">
+
+                        <div class="artist-image">
+
+                            <img
+                                src="{{ url_for('static', filename='imagens/shira.webp') }}"
+                                alt="Tatuagem de artes sutis e traço fino feita em Guarulhos - Artista Shira"
+                            >
+
+                            <div class="artist-number">04</div>
+
+                        </div>
+
+                        <h3 class="font-bold text-2xl italic">
+                            Shira
+                        </h3>
+
+                        <span class="font-semibold text-[#b4977b]">
+                            Tatuagem Fine Line
+                        </span>
+
+                        <p class="mx-2">
+                            Mestre do traço ultra-fino, Shira cria artes sutis e cheias de significado.
+                            Seu estilo é marcado pela limpeza e harmonia, ideal para quem busca uma tatuagem minimalista com acabamento impecável.
+                        </p>
+
+                        <div class="botoes">
+
+                            <button class="button">
+                                <a
+                                    href="https://www.instagram.com/rshiratoritattoo"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Instagram
+                                </a>
+                            </button>
+
+                            <button class="button">
+                                <a href="/galeria">
+                                    Portfolio
+                                </a>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="next-btn"
+                onclick="moveCarousel(1)"
+                aria-label="Próximo"
+            >
+                &#10095;
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA / ORÇAMENTO
+    ====================================================== -->
+
+    <section class="orcamento">
+
+        <div class="orcamento-bg"></div>
+
+        <div class="orcamento-content">
+
+            <div class="section-label aparecer">
+                <span>03</span>
+                <i></i>
+                SEU PROJETO
+            </div>
+
+            <h2 class="animar-esquerda">
+                Sua próxima tatuagem
+                <span>começa aqui.</span>
+            </h2>
+
+            <p class="animar-esquerda">
+                Conte sua ideia para nossa equipe e transforme sua inspiração em uma tatuagem única.
+            </p>
+
+            <a
+                href="/atendimento"
+                class="botao aparecer"
+            >
+                FALE COM A GENTE
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         JORNAL / BLOG
+    ====================================================== -->
+
+    <section class="jornal py-4">
+
+        <div class="section-label section-label-center aparecer">
+            <span>04</span>
+            <i></i>
+            CONTEÚDO
+        </div>
+
+        <h2 class="aparecer">
+            <strong>Jornal Gugo</strong>
+        </h2>
+
+        <p class="aparecer text-center w-full text-white/40">
+            Conteúdos, dicas e informações para você cuidar da sua tatuagem e conhecer melhor o universo da tattoo.
+        </p>
+
+        <div class="jornal-grid">
+
+            {% if posts %}
+
+                {% for post in posts[:3] %}
+
+                <article class="jornal-card aparecer">
+
+                    <div class="jornal-image">
+
+                        {% if post.imagem %}
+                            <img
+                                src="{{ url_for('static', filename='imagens/' + post.imagem) }}"
+                                alt="{{ post.titulo }}"
+                            >
+                        {% else %}
+                            <img
+                                src="{{ url_for('static', filename='imagens/bannerestudio.webp') }}"
+                                alt="{{ post.titulo }}"
+                            >
+                        {% endif %}
+
+                        <div class="jornal-overlay"></div>
+
+                    </div>
+
+                    <div class="jornal-content">
+
+                        <span class="jornal-tag">
+                            BLOG
+                        </span>
+
+                        <h3>
+                            {{ post.titulo }}
+                        </h3>
+
+                        {% if post.resumo %}
+                            <p>
+                                {{ post.resumo }}
+                            </p>
+                        {% endif %}
+
+                        <a href="/blog/{{ post.slug }}">
+                            LER ARTIGO
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+                {% endfor %}
+
+            {% endif %}
+
+        </div>
+
+        <div class="jornal-button aparecer">
+
+            <a href="/blog" class="hero-secondary">
+                VER TODOS OS ARTIGOS
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         AVALIAÇÕES
+    ====================================================== -->
+
+    <section class="avaliacoes">
+
+        <div class="section-label section-label-center aparecer">
+            <span>05</span>
+            <i></i>
+            CLIENTES
+        </div>
+
+        <h2 class="aparecer">
+            <strong>O que nossos clientes dizem</strong>
+        </h2>
+
+        <p class="avaliacoes-subtitle aparecer">
+            Experiências reais de quem já viveu a experiência Gugo Tattoo.
+        </p>
+
+
+        <div class="review-viewport">
+
+            <div class="review-track" id="reviewTrack">
+
+
+                <div class="individual">
+
+                    <div class="quote-icon">“</div>
+
+                    <p class="review-text">
+                        "Pessoal tudo bem, quero agradecer ao pessoal do Gugo Tatoo, por todo processo, me deixarão bem tranquilo, pois foi a minha primeira, e o resultado melhor do que eu esperava."
                     </p>
-                    <a href="/cuidados" class="text-[#b4977b] text-xs uppercase tracking-[0.2em] font-bold border-b border-[#b4977b] pb-1 hover:text-white hover:border-white transition-all">
-                        Continuar lendo
-                    </a>
+
+                    <div class="review-footer">
+
+                        <div class="stars-google">
+                            <span class="stars">★★★★★</span>
+
+                            <img
+                                src="static/imagens/google.png"
+                                alt="Google"
+                                class="google-mini-logo"
+                            >
+                        </div>
+
+                        <hr>
+
+                        <h3 class="avaliah3">
+                            Marcos M2X
+                        </h3>
+
+                        <p class="avaliap">
+                            Avaliação via Google Maps
+                        </p>
+
+                    </div>
+
                 </div>
+
+
+                <div class="individual">
+
+                    <div class="quote-icon">“</div>
+
+                    <p class="review-text">
+                        "Desde o atendimento da Herica, que é super solicita e simpática, oferecendo detalhes sobre o procedimento, o ambiente agradável e cheio de boas energias!"
+                    </p>
+
+                    <div class="review-footer">
+
+                        <div class="stars-google">
+                            <span class="stars">★★★★★</span>
+
+                            <img
+                                src="static/imagens/google.png"
+                                alt="Google"
+                                class="google-mini-logo"
+                            >
+                        </div>
+
+                        <hr>
+
+                        <h3 class="avaliah3">
+                            Erika Farias
+                        </h3>
+
+                        <p class="avaliap">
+                            Avaliação via Google Maps
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="individual">
+
+                    <div class="quote-icon">“</div>
+
+                    <p class="review-text">
+                        "O ambiente é muito bacana, os profissionais são muito bons, tudo é bem limpo e organizado, a minha tatoo ficou muito top, acima das expectativas."
+                    </p>
+
+                    <div class="review-footer">
+
+                        <div class="stars-google">
+                            <span class="stars">★★★★★</span>
+
+                            <img
+                                src="static/imagens/google.png"
+                                alt="Google"
+                                class="google-mini-logo"
+                            >
+                        </div>
+
+                        <hr>
+
+                        <h3 class="avaliah3">
+                            Elton Ferreira
+                        </h3>
+
+                        <p class="avaliap">
+                            Avaliação via Google Maps
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="individual">
+
+                    <div class="quote-icon">“</div>
+
+                    <p class="review-text">
+                        "Melhor studio de tatuagem de Guarulhos e região, sou cliente há 10 anos e minha primeira tattoo é tão viva q parece que foi feita ontem."
+                    </p>
+
+                    <div class="review-footer">
+
+                        <div class="stars-google">
+                            <span class="stars">★★★★★</span>
+
+                            <img
+                                src="static/imagens/google.png"
+                                alt="Google"
+                                class="google-mini-logo"
+                            >
+                        </div>
+
+                        <hr>
+
+                        <h3 class="avaliah3">
+                            Debora Elyodora
+                        </h3>
+
+                        <p class="avaliap">
+                            Avaliação via Google Maps
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="individual">
+
+                    <div class="quote-icon">“</div>
+
+                    <p class="review-text">
+                        "Fiz minha 4ª tatuagem com eles, recomendo sempre, muito bem atendido, todos são verdadeiros artistas, vou fazer mais algumas com certeza."
+                    </p>
+
+                    <div class="review-footer">
+
+                        <div class="stars-google">
+                            <span class="stars">★★★★★</span>
+
+                            <img
+                                src="static/imagens/google.png"
+                                alt="Google"
+                                class="google-mini-logo"
+                            >
+                        </div>
+
+                        <hr>
+
+                        <h3 class="avaliah3">
+                            Felipe Mattos
+                        </h3>
+
+                        <p class="avaliap">
+                            Avaliação via Google Maps
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="individual">
+
+                    <div class="quote-icon">“</div>
+
+                    <p class="review-text">
+                        "Sem palavras um lugar maravilhoso. Sem duvidas é um estúdio de primeiro mundo. Show, atendimento impecável recepção impecável!"
+                    </p>
+
+                    <div class="review-footer">
+
+                        <div class="stars-google">
+                            <span class="stars">★★★★★</span>
+
+                            <img
+                                src="static/imagens/google.png"
+                                alt="Google"
+                                class="google-mini-logo"
+                            >
+                        </div>
+
+                        <hr>
+
+                        <h3 class="avaliah3">
+                            China Viana
+                        </h3>
+
+                        <p class="avaliap">
+                            Avaliação via Google Maps
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="lg:col-span-4 flex flex-col gap-10">
-                
-                <div class="group cursor-pointer">
-                    <div class="flex gap-6 items-start">
-                        <div class="w-24 h-24 overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
-                            <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=400" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex-1">
-                            <span class="text-[#b4977b] text-[10px] font-bold uppercase tracking-widest">Estilos</span>
-                            <h4 class="text-white text-lg font-light leading-snug mt-1 group-hover:text-[#b4977b] transition-colors">
-                                <a href="/estilo">Tatuagem Geek e Cyberpunk: Tendências 2026</a>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="group cursor-pointer border-t border-zinc-900 pt-10">
-                    <div class="flex gap-6 items-start">
-                        <div class="w-24 h-24 overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
-                            <img src="https://images.pexels.com/photos/4125588/pexels-photo-4125588.jpeg" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex-1">
-                            <span class="text-[#b4977b] text-[10px] font-bold uppercase tracking-widest">Técnica</span>
-                            <h4 class="text-white text-lg font-light leading-snug mt-1 group-hover:text-[#b4977b] transition-colors">
-                                <a href="/realismo">Realismo Negro e Cinza em 2026</a>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="group cursor-pointer border-t border-zinc-900 pt-10">
-                    <div class="flex gap-6 items-start">
-                        <div class="w-24 h-24 overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
-                            <img src="https://images.pexels.com/photos/2134085/pexels-photo-2134085.jpeg" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex-1">
-                            <span class="text-[#b4977b] text-[10px] font-bold uppercase tracking-widest">Indústria</span>
-                            <h4 class="text-white text-lg font-light leading-snug mt-1 group-hover:text-[#b4977b] transition-colors">
-                                <a href="/vegan">Tintas Veganas e Sustentabilidade</a>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
         </div>
-    </div>
-</section>
-<section class="avaliamento">
-    <h2 class="clienteh1 aparecer"><strong>O que nossos clientes dizem</strong></h2>
-    <p class="clientep text-white">Confiança e satisfação comprovadas</p>
 
-    <div class="avaliacoes-container">
-        <div class="avaliacoes-track" id="reviewTrack">
-            
-            <div class="individual">
-                <div class="quote-icon">“</div>
-                <p class="review-text">"Pessoal tudo bem, quero agradecer ao pessoal do Gugo Tatoo, por todo processo, me deixarão bem tranquilo, pois foi a minha primeira, e o resultado melhor do que eu esperava."</p>
-                <div class="review-footer">
-                    <div class="stars-google">
-                        <span class="stars">★★★★★</span>
-                        <img src="static/imagens/google.png" alt="Google" class="google-mini-logo">
-                    </div>
-                    <hr>
-                    <h3 class="avaliah3">Marcos M2X</h3>
-                    <p class="avaliap">Avaliação via Google Maps</p>
-                </div>
+
+        <div class="avaliabt">
+
+            <button class="bt">
+
+                <a
+                    href="https://www.google.com/search?q=gugo+tattoo+guarulhos+reviews"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    ver mais avaliações
+                </a>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-column">
+
+                <img
+                    src="{{ url_for('static', filename='imagens/gugologo.webp') }}"
+                    alt="Gugo tattoo"
+                    class="footer-logo"
+                >
+
+                <p>
+                    <strong>
+                        Cada traço, uma história.
+                        <br>
+                        A sua pode começar agora.
+                    </strong>
+                </p>
+
             </div>
 
-            <div class="individual">
-                <div class="quote-icon">“</div>
-                <p class="review-text">"Desde o atendimento da Herica, que é super solicita e simpática, oferecendo detalhes sobre o procedimento, o ambiente agradável e cheio de boas energias!"</p>
-                <div class="review-footer">
-                    <div class="stars-google">
-                        <span class="stars">★★★★★</span>
-                        <img src="static/imagens/google.png" alt="Google" class="google-mini-logo">
-                    </div>
-                    <hr>
-                    <h3 class="avaliah3">Erika Farias</h3>
-                    <p class="avaliap">Avaliação via Google Maps</p>
-                </div>
+
+            <div class="footer-column">
+
+                <h3>
+                    LINKS RÁPIDOS
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="/estudio">
+                            O Estúdio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/galeria">
+                            Galeria
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/atendimento">
+                            Orçamento
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/blog">
+                            Blog
+                        </a>
+                    </li>
+
+                </ul>
+
             </div>
 
-            <div class="individual">
-                <div class="quote-icon">“</div>
-                <p class="review-text">"O ambiente é muito bacana, os profissionais são muito bons, tudo é bem limpo e organizado, a minha tatoo ficou muito top, acima das expectativas."</p>
-                <div class="review-footer">
-                    <div class="stars-google">
-                        <span class="stars">★★★★★</span>
-                        <img src="static/imagens/google.png" alt="Google" class="google-mini-logo">
-                    </div>
-                    <hr>
-                    <h3 class="avaliah3">Elton Ferreira</h3>
-                    <p class="avaliap">Avaliação via Google Maps</p>
-                </div>
-            </div>
 
-            <div class="individual">
-                <div class="quote-icon">“</div>
-                <p class="review-text">"Melhor studio de tatuagem de Guarulhos e região, sou cliente há 10 anos e minha primeira tattoo é tão viva q parece que foi feita ontem."</p>
-                <div class="review-footer">
-                    <div class="stars-google">
-                        <span class="stars">★★★★★</span>
-                        <img src="static/imagens/google.png" alt="Google" class="google-mini-logo">
-                    </div>
-                    <hr>
-                    <h3 class="avaliah3">Debora Elyodora</h3>
-                    <p class="avaliap">Avaliação via Google Maps</p>
-                </div>
-            </div>
+            <div class="footer-column">
 
-            <div class="individual">
-                <div class="quote-icon">“</div>
-                <p class="review-text">"Fiz minha 4ª tatuagem com eles, recomendo sempre, muito bem atendido, todos são verdadeiros artistas, vou fazer mais algumas com certeza."</p>
-                <div class="review-footer">
-                    <div class="stars-google">
-                        <span class="stars">★★★★★</span>
-                        <img src="static/imagens/google.png" alt="Google" class="google-mini-logo">
-                    </div>
-                    <hr>
-                    <h3 class="avaliah3">Felipe Mattos</h3>
-                    <p class="avaliap">Avaliação via Google Maps</p>
-                </div>
-            </div>
+                <h3>
+                    CONTATO
+                </h3>
 
-            <div class="individual">
-                <div class="quote-icon">“</div>
-                <p class="review-text">"Sem palavras um lugar maravilhoso. Sem duvidas é um estúdio de primeiro mundo. Show, atendimento impecável recepção impecável!"</p>
-                <div class="review-footer">
-                    <div class="stars-google">
-                        <span class="stars">★★★★★</span>
-                        <img src="static/imagens/google.png" alt="Google" class="google-mini-logo">
-                    </div>
-                    <hr>
-                    <h3 class="avaliah3">China Viana</h3>
-                    <p class="avaliap">Avaliação via Google Maps</p>
+                <p>
+                    Horário de Funcionamento:
+                </p>
+
+                <p>
+                    Terça a Sexta: 10h às 20h
+                </p>
+
+                <p>
+                    Sábado: 10h às 18h
+                </p>
+
+                <div class="footer-bt-div">
+
+                    <button class="footer-bt">
+
+                        <img
+                            src="{{ url_for('static', filename='imagens/instagram.svg') }}"
+                            alt="Instagram"
+                        >
+
+                    </button>
+
                 </div>
+
             </div>
 
         </div>
-    </div>
 
-    <div class="avaliabt">
-        <button class="bt">
-            <a href="https://www.google.com/search?q=gugo+tattoo+guarulhos+reviews" target="_blank">ver mais avaliações</a>
-        </button>
-    </div>
-</section>
-<footer>
-  <div class="footer-container">
-    <div class="footer-column">
-      <img src="{{ url_for('static', filename='imagens/gugologo.webp') }}" alt="Gugo tattoo" class="footer-logo">
-      <p><strong>Cada traço, uma história. <br> A sua pode começar agora.
-      </strong></p>
-    </div>
 
-    <div class="footer-column">
-      <h3>LINKS RÁPIDOS</h3>
-      <ul>
-        <li><a href="/estudio">O Estúdio</a></li>
-        <li><a href="/galeria">Galeria</a></li>
-        <li><a href="/atendimento">Orçamento</a></li>
-        <li><a href="/blog">Blog</a></li>
-      </ul>
-    </div>
+        <div class="footer-bottom">
 
-    <div class="footer-column">
-      <h3>CONTATO</h3>
-      <p>Horário de Funcionamento:</p>
-      <p>Terça a Sexta: 10h às 20h</p>
-      <p>Sábado: 10h às 18h</p>
-      <div class="footer-bt-div">
-        <button class="footer-bt">
-          <img src="{{ url_for('static', filename='imagens/instagram.svg') }}" alt="">
-        </button>
-      </div>
-    </div>
-  </div>
+            <p>
+                © 2025 Gugo Tattoo. Todos os direitos reservados
+            </p>
 
-  <div class="footer-bottom">
-    <p>© 2025 Gugo Tattoo. Todos os direitos reservados</p>
-    <p>Rua João Bueno, 155, Guarulhos, SP</p>
-  </div>
-</footer>
-<script>
-  let currentIndex = 0;
+            <p>
+                Rua João Bueno, 155, Guarulhos, SP
+            </p>
 
-function moveCarousel(direction) {
-    const slider = document.getElementById('carouselSlider');
-    const cards = document.querySelectorAll('.card');
-    const cardWidth = cards[0].offsetWidth; // Largura do card
-    const gap = 20; // O gap que você definiu no CSS
-    const totalCards = cards.length;
-    
-    // Calcula quantos cards cabem na tela por vez
-    const viewportWidth = document.querySelector('.carousel-viewport').offsetWidth;
-    const cardsInView = Math.floor(viewportWidth / (cardWidth + gap));
-    
-    // Atualiza o índice
-    currentIndex += direction;
+        </div>
 
-    // Limite para não ir antes do primeiro
-    if (currentIndex < 0) {
-        currentIndex = 0;
-    } 
-    
-    // Limite máximo: total de cards menos os que já estão aparecendo na tela
-    const maxIndex = totalCards - cardsInView;
-    if (currentIndex > maxIndex) {
-        currentIndex = maxIndex;
-    }
+    </footer>
 
-    // Calcula o deslocamento exato
-    const translateX = currentIndex * (cardWidth + gap);
-    slider.style.transform = `translateX(-${translateX}px)`;
-}
 
-window.onload = function() {
-    const track = document.getElementById('reviewTrack');
-    
-    // Clona todo o conteúdo interno (os cards) do track
-    const clone = track.innerHTML;
-    
-    // Adiciona o clone ao final do track para criar o loop
-    track.innerHTML += clone;
-};
-</script>
-<script>
-  // Registra o plugin no GSAP
-gsap.registerPlugin(ScrollTrigger);
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
-// Função para configurar as animações
-function initAnimations() {
+    <script>
 
-    // 1. ANIMAÇÃO: DA ESQUERDA PARA DIREITA
-    document.querySelectorAll('.animar-esquerda').forEach(el => {
-        gsap.from(el, {
-            x: -100,          // Começa 100px à esquerda
-            opacity: 0,       // Começa invisível
-            duration: 1.2,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: el,       // O gatilho é o próprio elemento
-                start: "top 85%",  // Começa quando o topo do item atinge 85% da tela
-                toggleActions: "play none none none" // Toca apenas uma vez
+        document.addEventListener("DOMContentLoaded", () => {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+
+            /* =================================================
+               NAVBAR
+            ================================================= */
+
+            const nav = document.querySelector("nav");
+            const menu = document.querySelector("#mobile-menu");
+            const menuLinks = document.querySelector("#nav-list");
+
+            const updateNav = () => {
+
+                if (!nav) return;
+
+                nav.classList.toggle(
+                    "scrolled",
+                    window.scrollY > 25
+                );
+
+            };
+
+            updateNav();
+
+            window.addEventListener(
+                "scroll",
+                updateNav,
+                { passive: true }
+            );
+
+
+            /* =================================================
+               MENU MOBILE
+            ================================================= */
+
+            if (menu && menuLinks) {
+
+                menu.addEventListener("click", () => {
+
+                    const active =
+                        menuLinks.classList.toggle("active");
+
+                    menu.classList.toggle(
+                        "is-active",
+                        active
+                    );
+
+                    document.body.classList.toggle(
+                        "menu-open",
+                        active
+                    );
+
+                });
+
+
+                document
+                    .querySelectorAll(".ul-nav a")
+                    .forEach(link => {
+
+                        link.addEventListener(
+                            "click",
+                            () => {
+
+                                menu.classList.remove(
+                                    "is-active"
+                                );
+
+                                menuLinks.classList.remove(
+                                    "active"
+                                );
+
+                                document.body.classList.remove(
+                                    "menu-open"
+                                );
+
+                            }
+                        );
+
+                    });
+
             }
-        });
-    });
 
-    // 2. ANIMAÇÃO: DA DIREITA PARA ESQUERDA
-    document.querySelectorAll('.animar-direita').forEach(el => {
-        gsap.from(el, {
-            x: 100,           // Começa 100px à direita
-            opacity: 0,
-            duration: 1.2,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: el,
-                start: "top 80%",
-                toggleActions: "play none none none"
+
+            /* =================================================
+               CARROSSEL
+            ================================================= */
+
+            let currentIndex = 0;
+
+
+            window.moveCarousel = function(direction) {
+
+                const slider =
+                    document.getElementById(
+                        "carouselSlider"
+                    );
+
+                const viewport =
+                    document.querySelector(
+                        ".carousel-viewport"
+                    );
+
+                const cards =
+                    slider
+                        ? slider.querySelectorAll(".card")
+                        : [];
+
+
+                if (
+                    !slider ||
+                    !viewport ||
+                    !cards.length
+                ) {
+                    return;
+                }
+
+
+                const firstCard = cards[0];
+
+                const cardWidth =
+                    firstCard.getBoundingClientRect().width;
+
+
+                const styles =
+                    getComputedStyle(slider);
+
+
+                const gap =
+                    parseFloat(
+                        styles.columnGap ||
+                        styles.gap ||
+                        0
+                    );
+
+
+                const step =
+                    cardWidth + gap;
+
+
+                const visible =
+                    Math.max(
+                        1,
+                        Math.floor(
+                            (
+                                viewport.clientWidth +
+                                gap
+                            ) / step
+                        )
+                    );
+
+
+                const maxIndex =
+                    Math.max(
+                        0,
+                        cards.length - visible
+                    );
+
+
+                currentIndex =
+                    Math.min(
+                        Math.max(
+                            currentIndex + direction,
+                            0
+                        ),
+                        maxIndex
+                    );
+
+
+                slider.style.transform =
+                    `translate3d(-${currentIndex * step}px,0,0)`;
+
+            };
+
+
+            window.addEventListener(
+                "resize",
+                () => {
+
+                    currentIndex = 0;
+
+                    const slider =
+                        document.getElementById(
+                            "carouselSlider"
+                        );
+
+                    if (slider) {
+
+                        slider.style.transform =
+                            "translate3d(0,0,0)";
+
+                    }
+
+                }
+            );
+
+
+            /* =================================================
+               GSAP
+            ================================================= */
+
+            const reduceMotion =
+                window.matchMedia(
+                    "(prefers-reduced-motion: reduce)"
+                ).matches;
+
+
+            if (!reduceMotion) {
+
+
+                /* ---------------------------------------------
+                   ENTRADA PELA ESQUERDA
+                --------------------------------------------- */
+
+                gsap.utils
+                    .toArray(".animar-esquerda")
+                    .forEach(el => {
+
+                        gsap.fromTo(
+                            el,
+
+                            {
+                                x: -55,
+                                opacity: 0
+                            },
+
+                            {
+                                x: 0,
+                                opacity: 1,
+                                duration: 1.05,
+                                ease: "power3.out",
+                                clearProps: "transform",
+
+                                scrollTrigger: {
+                                    trigger: el,
+                                    start: "top 88%",
+                                    once: true
+                                }
+                            }
+                        );
+
+                    });
+
+
+                /* ---------------------------------------------
+                   ENTRADA PELA DIREITA
+                --------------------------------------------- */
+
+                gsap.utils
+                    .toArray(".animar-direita")
+                    .forEach(el => {
+
+                        gsap.fromTo(
+                            el,
+
+                            {
+                                x: 55,
+                                opacity: 0
+                            },
+
+                            {
+                                x: 0,
+                                opacity: 1,
+                                duration: 1.05,
+                                ease: "power3.out",
+                                clearProps: "transform",
+
+                                scrollTrigger: {
+                                    trigger: el,
+                                    start: "top 88%",
+                                    once: true
+                                }
+                            }
+                        );
+
+                    });
+
+
+                /* ---------------------------------------------
+                   APARECER
+                --------------------------------------------- */
+
+                gsap.utils
+                    .toArray(".aparecer")
+                    .forEach((el, i) => {
+
+                        gsap.fromTo(
+                            el,
+
+                            {
+                                y: 38,
+                                opacity: 0
+                            },
+
+                            {
+                                y: 0,
+                                opacity: 1,
+                                duration: .9,
+                                delay:
+                                    Math.min(
+                                        (i % 4) * .06,
+                                        .18
+                                    ),
+                                ease: "power3.out",
+                                clearProps: "transform",
+
+                                scrollTrigger: {
+                                    trigger: el,
+                                    start: "top 91%",
+                                    once: true
+                                }
+                            }
+                        );
+
+                    });
+
+
+                /* ---------------------------------------------
+                   HERO PARALLAX
+                --------------------------------------------- */
+
+                const hero =
+                    document.querySelector(".banner");
+
+                const heroContent =
+                    document.querySelector(
+                        ".banner .conteudo"
+                    );
+
+
+                if (hero && heroContent) {
+
+                    gsap.to(
+                        heroContent,
+
+                        {
+                            yPercent: -8,
+                            ease: "none",
+
+                            scrollTrigger: {
+                                trigger: hero,
+                                start: "top top",
+                                end: "bottom top",
+                                scrub: true
+                            }
+                        }
+                    );
+
+                }
+
+
+                /* ---------------------------------------------
+                   CARDS — MICRO MOVIMENTO
+                --------------------------------------------- */
+
+                document
+                    .querySelectorAll(".diferencial-card")
+                    .forEach(card => {
+
+                        card.addEventListener(
+                            "mousemove",
+                            e => {
+
+                                const rect =
+                                    card.getBoundingClientRect();
+
+                                const x =
+                                    e.clientX -
+                                    rect.left;
+
+                                const y =
+                                    e.clientY -
+                                    rect.top;
+
+                                const rotateY =
+                                    ((x / rect.width) - .5) * 4;
+
+                                const rotateX =
+                                    ((y / rect.height) - .5) * -4;
+
+
+                                card.style.transform =
+                                    `perspective(900px)
+                                     rotateX(${rotateX}deg)
+                                     rotateY(${rotateY}deg)
+                                     translateY(-5px)`;
+
+                            }
+                        );
+
+
+                        card.addEventListener(
+                            "mouseleave",
+                            () => {
+
+                                card.style.transform =
+                                    "";
+
+                            }
+                        );
+
+                    });
+
             }
+
+
+            ScrollTrigger.refresh();
+
         });
-    });
 
-    // 3. ANIMAÇÃO: APARECER (Crescer/Surgir de baixo)
-    
-        // 3. ANIMAÇÃO: APARECER (Individual para cada item)
-document.querySelectorAll('.aparecer').forEach(el => {
-    gsap.from(el, {
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: el,       // O gatilho agora é o próprio elemento atual (el)
-            start: "top 90%",  // Dispara quando o elemento entra na tela
-            toggleActions: "play none none none"
-        }
-    });
-});
-    };
+    </script>
 
-    
-
-
-// Inicia as animações apenas após o carregamento total da página
-window.addEventListener('load', initAnimations);
-</script>
-<script>
-    const menu = document.querySelector('#mobile-menu');
-    const menuLinks = document.querySelector('#nav-list');
-
-    menu.addEventListener('click', function() {
-        menu.classList.toggle('is-active'); // Anima o hambúrguer
-        menuLinks.classList.toggle('active'); // Abre/fecha o menu
-    });
-
-    // Fecha o menu ao clicar em um link
-    document.querySelectorAll('.ul-nav li a').forEach(link => {
-        link.addEventListener('click', () => {
-            menu.classList.remove('is-active');
-            menuLinks.classList.remove('active');
-        });
-    });
-</script>
 </body>
-
 </html>
